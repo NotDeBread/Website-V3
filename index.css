@@ -266,6 +266,7 @@ p {
     background-image: url(images/bg.png);
     height: 50px;
     margin-bottom: 15px;
+    margin-top: 25px;
 }
 
 .version {
