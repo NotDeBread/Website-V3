@@ -1,0 +1,289 @@
+:root {
+    --darkbg: rgb(17, 17, 29);
+    --bg: rgb(10, 8, 15);
+    --bb: rgb(255, 206, 107);
+    --gray: rgb(100, 100, 100);
+}
+
+@font-face {
+    font-family: renogare;
+    src: url("renogare.otf");
+}
+
+body {
+    background-color: rgb(32, 28, 45);
+}
+
+html {
+    font-size: 62.5%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+ul {
+    font-family: renogare;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+p {
+    color: white;
+    font-family: renogare;
+}
+
+.navimg {
+    text-align: left;
+    float: left;
+    list-style: none;
+    transition: font-size ease-in-out 0.25s;
+    cursor: pointer;
+    padding: 4px;
+    transition: transform ease-in-out 0.25s;
+}
+
+.navimg:hover {
+    transform: scale(1.5, 0.75);
+}
+
+.navtext {
+    text-align: right;
+    float: right;
+    color: var(--gray);
+    padding: 1em;
+    list-style: none;
+    font-size: 1.5em;
+    transition: font-size ease-in-out 0.25s;
+    cursor: pointer;
+}
+
+.navtext:hover {
+    font-size: 1.6em;
+}
+
+.line {
+    height: 3px;
+    width: 0;
+    background-color: var(--gray);
+    transition: width ease-in-out 0.25s;
+}
+
+.navtext:hover .line {
+    width: 100%;
+}
+
+.nav {
+    position: sticky;
+    top: 10px;
+}
+
+.navbg {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 25%;
+}
+
+.pretitle {
+    font-size: 3em;
+    font-family: renogare;
+    color: white;
+    padding: 0;
+    margin: 0;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.title {
+    font-size: 8em;
+    color: transparent;
+    margin: 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 1920px;
+    background-image: url(images/gradient.png);
+    animation: gradient 5s linear infinite;
+    text-align: center;
+    z-index: 1;
+}
+
+.warning {
+    text-align: center;
+    color: red;
+    font-size: 1.5em;
+}
+
+.shadow {
+    font-size: 8em;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: -120px;
+    z-index: -1;
+    color: var(--darkbg);
+}
+
+@keyframes gradient {
+    0% {}
+    100% {
+        background-position: 1920px;
+    }
+}
+
+.lb {
+    height: 5px;
+    width: 50em;
+    background-color: var(--bg);
+    margin: auto;
+    opacity: 50%;
+}
+
+.desc {
+    font-size: 2em;
+    text-align: center;
+}
+
+.bg1 {
+    background-image: url(images/bg.png);
+    height: 750px;
+    z-index: -1;
+}
+
+.heading1 {
+    font-size: 4em;
+    text-align: center;
+}
+
+.boxall {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.box1 {
+    background-color: var(--darkbg);
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border: var(--gray) solid;
+    border-width: 1px;
+    border-radius: 1em;
+    transition: transform ease-in-out 0.25s, border ease-in-out 0.25s, border-width ease-in-out 0.25s;
+    cursor: pointer;
+    transform: scale(100%);
+}
+
+.box1:hover {
+    transform: scale(105%);
+    border: var(--bb) solid;
+    border-width: 1px;
+}
+
+.box1:hover .box1T {
+    color: var(--bb);
+}
+
+.box1T {
+    color: var(--gray);
+    font-size: 2em;
+    transition: color ease-in-out 0.25s;
+}
+
+.boximg1 {
+    box-shadow: inset;
+}
+
+.box2 {
+    background-color: var(--darkbg);
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border: var(--gray) solid;
+    border-width: 1px;
+    border-radius: 1em;
+    transition: transform ease-in-out 0.25s;
+    cursor: pointer;
+    transform: scale(100%);
+}
+
+.box2:hover {
+    transform: scale(105%);
+}
+
+.box2T {
+    color: var(--gray);
+    font-size: 2em;
+    transition: color ease-in-out 0.25s;
+}
+
+.boximg2 {
+    box-shadow: inset;
+}
+
+.notpublic {
+    position: absolute;
+    z-index: 1;
+    font-family: renogare;
+    color: white;
+    top: 50%;
+    left: 0;
+    right: 0;
+    font-size: 1.5em;
+    opacity: 0%;
+    transition: opacity ease-in-out 0.5s;
+}
+
+.notpublicbg {
+    position: absolute;
+    background-color: black;
+    opacity: 50%;
+    height: 50px;
+    width: 0%;
+    top: 45%;
+    transition: width ease-in-out 0.35s;
+}
+
+.box2:hover .notpublicbg {
+    width: 100%;
+}
+
+.box2:hover .notpublic {
+    opacity: 100%;
+}
+
+.footer {
+    background-image: url(images/bg.png);
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.version {
+    position: absolute;
+}
+
+.footertext {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1.25em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.imgshadow1 {
+    position: absolute;
+    width: 250px;
+    height: 170px;
+    box-shadow: inset 0px 0px 20px 20px var(--darkbg);
+    margin-top: -167px;
+}
