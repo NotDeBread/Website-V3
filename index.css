@@ -47,7 +47,14 @@ p {
 }
 
 .navimg:hover {
-    transform: scale(1.5, 0.75);
+    animation: spin 1s linear infinite both;
+    cursor: wait;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .navtext {
@@ -219,6 +226,7 @@ p {
 
 .box2:hover {
     transform: scale(105%);
+    cursor: not-allowed;
 }
 
 .box2T {
@@ -271,14 +279,24 @@ p {
 
 .version {
     position: absolute;
+    color: var(--gray);
+    bottom: -300px;
 }
 
-.footertext {
+.footergrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     font-size: 1.25em;
     text-align: center;
     text-decoration: none;
+}
+
+.footertext {
+    text-decoration: none;
+}
+
+.footertext:hover {
+    transform: scale(110%);
 }
 
 .imgshadow1 {
