@@ -1,6 +1,7 @@
 :root {
-    --darkbg: rgb(17, 17, 29);
     --bg: rgb(10, 8, 15);
+    --darkbg: rgb(17, 17, 29);
+    --darkerbg: rgb(10, 10, 17);
     --bb: rgb(255, 206, 107);
     --gray: rgb(100, 100, 100);
 }
@@ -12,6 +13,7 @@
 
 body {
     background-color: rgb(32, 28, 45);
+    z-index: -1;
 }
 
 html {
@@ -85,7 +87,7 @@ p {
 
 .nav {
     position: sticky;
-    top: 10px;
+    top: 8px;
 }
 
 .navbg {
@@ -126,17 +128,12 @@ p {
     font-size: 1.5em;
 }
 
-.shadow {
-    font-size: 8em;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+.dbanimation {
+    width: 346px;
+}
+
+.dbanimationcenter {
     text-align: center;
-    margin-top: -120px;
-    z-index: -1;
-    color: var(--darkbg);
 }
 
 @keyframes gradient {
@@ -186,7 +183,6 @@ p {
     border-width: 1px;
     border-radius: 1em;
     transition: transform ease-in-out 0.25s, border ease-in-out 0.25s, border-width ease-in-out 0.25s;
-    cursor: pointer;
     transform: scale(100%);
 }
 
@@ -194,6 +190,7 @@ p {
     transform: scale(105%);
     border: var(--bb) solid;
     border-width: 1px;
+    cursor: pointer;
 }
 
 .box1:hover .box1T {
@@ -305,4 +302,51 @@ p {
     height: 170px;
     box-shadow: inset 0px 0px 20px 20px var(--darkbg);
     margin-top: -167px;
+}
+
+.credits {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--darkerbg);
+    transition: width ease-in-out 0.25s, height ease-in-out 0.25s;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.credits:hover {
+    width: 110px;
+    height: 110px;
+}
+
+.creditsicon {
+    margin: 3px;
+    transition: opacity ease-in-out 0.25s;
+    position: absolute;
+    left: 3px;
+}
+
+.credits:hover .creditsicon {
+    opacity: 0%;
+}
+
+.creditstext {
+    opacity: 0;
+    transition: opacity ease-in-out 0.25s;
+    font-size: 1.2em;
+}
+
+.credits:hover .creditstext {
+    opacity: 100%;
+}
+
+.creditlink {
+    text-decoration: none;
+    color: white;
+}
+
+.creditlink:hover {
+    font-size: 1.1em;
 }
