@@ -39,6 +39,12 @@ p {
     font-family: renogare;
 }
 
+.bg1 {
+    background-image: url(images/bg.png);
+    height: 750px;
+    z-index: -1;
+}
+
 .title {
     text-align: center;
 }
@@ -110,4 +116,9 @@ p {
 .backbuttontext {
     font-family: renogare;
     color: white;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3em;
 }

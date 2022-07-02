@@ -98,7 +98,7 @@ p {
     list-style: none;
     font-size: 1.5em;
     transition: font-size ease-in-out 0.25s;
-    cursor: pointer;
+    cursor: not-allowed;
 }
 
 .navtext:hover {
@@ -177,10 +177,10 @@ p {
 }
 
 .dbanimationcenter {
-    position: absolute;
     display: grid;
     align-items: center;
     width: 100%;
+    bottom: 0;
 }
 
 @keyframes gradient {
@@ -359,7 +359,7 @@ p {
 
 .credits:hover {
     width: 110px;
-    height: 110px;
+    height: 95px;
 }
 
 .creditsicon {
@@ -377,6 +377,7 @@ p {
     opacity: 0;
     transition: opacity ease-in-out 0.25s;
     font-size: 1.2em;
+    overflow: hidden;
 }
 
 .credits:hover .creditstext {
