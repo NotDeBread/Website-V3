@@ -1,7 +1,8 @@
 <!--
     TODO: 
-    -Make it clean.
     -Improve BreadBot Page.
+    -Add to the Texture Pack Page.
+    -Fix Breatbot Box issue. (Mentioned in the issues page on Github.)
 -->
 
 <html lang="en">
@@ -24,7 +25,7 @@
     <!--Not Copatible Screen-->
 
     <div class="notcompatible">
-        <img src="images/notcompatible.png" class="notcompatibleimg" width="0px">
+        <img src="images/notcompatible.png" class="notcompatibleimg" width="0px" alt="notcompatible">
     </div>
 
     <section class="desktop">
@@ -36,8 +37,9 @@
                 <p class="creditsicon">C</p>
                 <p class="creditstext">
                     CREDITS
-                    <br><a class="creditlink" href="https://www.youtube.com/channel/UCnEaPTt2l0TUmTmnN8e004Q" target="_blank" style="color: rgb(255, 183, 82);">Zesto</a>
+                    <br><a class="creditlink" href="https://github.com/Zesto3000" target="_blank" style="color: rgb(171, 82, 255);">Zesto</a>
                     <br><a class="creditlink" href="https://github.com/GangstaCat" target="_blank" style="color: rgb(97, 242, 255);">GangstaCat</a>
+                    <br><a class="creditlink" href="https://github.com/ZekoTheFox" target="_blank" style="color: rgb(172, 249, 255)">Zeko</a>
                     <br><a style="color: rgb(148, 255, 160);">ZeanZarzin</a>
                 </p>
             </div>
@@ -45,7 +47,6 @@
             <!--NavBar-->
 
             <ul class="nav">
-                <div class="navbg"></div>
                 <li class="navimg">
                     <a><img src="images/Icon.png" width="50px" alt="debreadicon"></a>
                 </li>
@@ -57,7 +58,7 @@
                 </li>
                 <li class="navtextleft">
                     <p class="version">
-                        BETA v3.06
+                        BETA v3.07
                     </p>
                 </li>
             </ul>
@@ -84,7 +85,7 @@
                 </p>
             </div>
             <div class="dbanimationcenter">
-                <img class="dbanimation" src="images/dbanim.png" alt="dbanimation" id="db" onclick="animate()">
+                <img class="dbanimation" src="images/debread/dbanim.png" alt="dbanimation" id="db" onclick="animate()">
             </div>
 
         </section>
@@ -98,7 +99,6 @@
         </div>
 
         <!--Boxes-->
-
         <div class="whole">
             <div class="boxall">
                 <div class="box1">
@@ -110,15 +110,16 @@
                         <div class="imgshadow1"></div>
                     </a>
                 </div>
-                <a style="margin: 0;">
+                <a href="bp.html" style="text-decoration: none;">
                     <div class="box2">
+                        <div class="alert">
+                            <p>
+                                Now Available!
+                            </p>
+                        </div>
                         <p class="box2T">
                             Breaxture Pack
                         </p>
-                        <section>
-                            <div class="notpublic">Coming Soon™</div>
-                            <div class="notpublicbg"></div>
-                        </section>
                         <img src="images/boximg2.png" width="250px" alt="box2img">
                         <div class="imgshadow1"></div>
                     </div>
@@ -132,7 +133,7 @@
             <div class="footergrid">
                 <a href="https://www.youtube.com/notdebread" target="_blank" class="footertext">
                     <p>
-                        Youtube
+                        YouTube
                     </p>
                 </a>
                 <a href="https://www.twitch.tv/notdebread" target="_blank" class="footertext">
@@ -158,7 +159,8 @@
             </div>
         </footer>
     </section>
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,206 @@
+:root {
+    --bg: rgb(32, 27, 46);
+    --darkbg: rgb(22, 20, 34);
+    --button: rgba(0, 0, 0, 0.5);
+    --buttonhover: rgba(0, 0, 0, 0.75);
+    --buttonborder: rgb(84, 52, 172);
+    --line: rgb(21, 19, 32);
+}
+
+@font-face {
+    font-family: renogare;
+    src: url("fonts/renogare.otf");
+}
+
+html {
+    font-size: 62.5%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: var(--bg);
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.bg1 {
+    position: absolute;
+    background: url("images/panorama.png") repeat-x;
+    animation: panorama 60s linear infinite;
+    height: 512px;
+    width: 4056px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    border: none;
+}
+
+.bg1-container {
+    overflow: hidden;
+    width: 10px;
+}
+
+@keyframes panorama {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-2048px, 0, 0);
+    }
+}
+
+.bg2 {
+    position: absolute;
+    background-color: var(--bg);
+    top: 410px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+p {
+    font-family: renogare;
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 2em;
+}
+
+.flink {
+    color: rgb(255, 238, 164);
+    text-decoration: none;
+}
+
+.flink:hover {
+    color: lightgoldenrodyellow;
+}
+
+.backbutton {
+    position: absolute;
+    background-color: var(--button);
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border: 1px var(--buttonborder) solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform ease-in-out 0.25s;
+    left: 5px;
+    top: 5px;
+}
+
+.backbutton:hover {
+    transform: scale(105%);
+}
+
+.backbuttontext {
+    font-family: renogare;
+    color: white;
+}
+
+.downloadbutton {
+    background-color: var(--button);
+    border: solid var(--buttonborder) 2px;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color ease-in-out 0.25s, transform ease-in-out 0.25s, box-shadow ease-in-out 0.25s;
+}
+
+.downloadbutton:hover {
+    background-color: var(--button);
+    transform: scale(105%);
+    box-shadow: 0px 0px 10px var(--buttonhover);
+}
+
+.downloadbuttonT {
+    font-family: renogare;
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.line {
+    position: absolute;
+    background-color: var(--line);
+    height: 5px;
+    width: 100%;
+    top: 410px;
+    left: 0;
+    z-index: 1;
+}
+
+.desc {
+    font-size: 1.75em;
+    margin-top: 50px;
+}
+
+.ct {
+    background-color: var(--darkbg);
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.ct-title {
+    padding-top: 10px;
+    font-size: 2em;
+    margin: 0;
+}
+
+.ct-subtitle {
+    margin: 0;
+    font-size: 1.25em;
+    color: gray;
+}
+
+.ct-list {
+    list-style: none;
+}
+
+.ct-liste-title {
+    font-size: 1.5em;
+    margin: 0;
+    margin-top: 25px;
+}
+
+.ct-liste-item {
+    margin: 0;
+    font-size: 1.25em;
+    color: gray;
+}
+
+.ct-list-img {
+    width: 50px;
+    transition: transform ease-in-out 0.25s;
+}
+
+.ct-list-img:hover {
+    transform: scale(200%);
+}
+
+.ct-footer {
+    font-size: 1.25em;
+    margin-bottom: 100px;
+    color: gray;
+}

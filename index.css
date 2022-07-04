@@ -4,6 +4,7 @@
     --darkerbg: rgb(10, 10, 17);
     --bb: rgb(255, 206, 107);
     --gray: rgb(100, 100, 100);
+    --bp: rgb(148, 255, 138);
 }
 
 @media only screen and (max-width: 500px) {
@@ -39,7 +40,7 @@
 
 @font-face {
     font-family: renogare;
-    src: url("renogare.otf");
+    src: url("fonts/renogare.otf");
 }
 
 body {
@@ -119,6 +120,7 @@ p {
 .nav {
     position: sticky;
     top: 8px;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .navtextleft {
@@ -131,15 +133,6 @@ p {
     left: 3px;
     position: absolute;
     top: 25px;
-}
-
-.navbg {
-    position: absolute;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 25%;
 }
 
 .pretitle {
@@ -174,6 +167,7 @@ p {
 .dbanimation {
     width: 346px;
     margin: auto;
+    cursor: pointer;
 }
 
 .dbanimationcenter {
@@ -231,13 +225,13 @@ p {
     border-radius: 1em;
     transition: transform ease-in-out 0.25s, border ease-in-out 0.25s, border-width ease-in-out 0.25s;
     transform: scale(100%);
+    cursor: pointer;
 }
 
 .box1:hover {
     transform: scale(105%);
     border: var(--bb) solid;
     border-width: 1px;
-    cursor: pointer;
 }
 
 .box1:hover .box1T {
@@ -263,14 +257,19 @@ p {
     border: var(--gray) solid;
     border-width: 1px;
     border-radius: 1em;
-    transition: transform ease-in-out 0.25s;
+    transition: transform ease-in-out 0.25s, border ease-in-out 0.25s, border-width ease-in-out 0.25s;
     cursor: pointer;
     transform: scale(100%);
 }
 
+.box2:hover .box2T {
+    color: var(--bp);
+}
+
 .box2:hover {
     transform: scale(105%);
-    cursor: not-allowed;
+    border: var(--bp) solid;
+    border-width: 1px;
 }
 
 .box2T {
@@ -283,35 +282,28 @@ p {
     box-shadow: inset;
 }
 
-.notpublic {
-    position: absolute;
-    z-index: 1;
-    font-family: renogare;
-    color: white;
-    top: 50%;
-    left: 0;
-    right: 0;
-    font-size: 1.5em;
-    opacity: 0%;
-    transition: opacity ease-in-out 0.5s;
-}
-
-.notpublicbg {
-    position: absolute;
-    background-color: black;
-    opacity: 50%;
-    height: 50px;
-    width: 0%;
-    top: 45%;
-    transition: width ease-in-out 0.35s;
-}
-
 .box2:hover .notpublicbg {
     width: 100%;
 }
 
 .box2:hover .notpublic {
     opacity: 100%;
+}
+
+.alert {
+    background-color: yellow;
+    width: 125px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+}
+
+.alert p {
+    color: black;
+    margin: 0;
+    font-size: 1.25em;
 }
 
 .footer {
@@ -359,7 +351,7 @@ p {
 
 .credits:hover {
     width: 110px;
-    height: 95px;
+    height: 110px;
 }
 
 .creditsicon {
