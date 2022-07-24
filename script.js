@@ -1,8 +1,11 @@
 var debread = document.getElementById('db');
 var debreadmad = false;
 var count = 3
+
 setInterval(dbcountdown, 1000)
-console.log("JS has been loaded!")
+console.log("Your mom!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
+//Changes the .png to another .png and logs it.
 
 debread.onclick = function animate() {
     if (document.getElementById('db').src == "images/debread/dbmad.png" && debreadmad == false) {
@@ -11,12 +14,17 @@ debread.onclick = function animate() {
         document.getElementById('db').src = "images/debread/dbmad.png";
         debreadmad = true;
         count = 3
-        console.log("DeBread Has Been Clicked")
+        console.log('DeBread Has Been Clicked')
     }
 }
 
+//Waits 3 seconds then changes it back.
+
 function dbcountdown() {
-    count -= 1;
+    if (count > 0) {
+        count -= 1;
+        console.log('DeBread', count)
+    } else return
 
     if (count == 0 && debreadmad == true) {
         document.getElementById('db').src = "images/debread/db.png";

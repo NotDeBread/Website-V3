@@ -21,6 +21,7 @@ html {
     font-size: 62.5%;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    font-family: renogare;
 }
 
 html::-webkit-scrollbar {
@@ -28,7 +29,6 @@ html::-webkit-scrollbar {
 }
 
 ul {
-    font-family: renogare;
     height: 50px;
     display: flex;
     flex-direction: row-reverse;
@@ -36,7 +36,6 @@ ul {
 
 p {
     color: white;
-    font-family: renogare;
 }
 
 .bg1 {
@@ -88,7 +87,6 @@ p {
 }
 
 .buttontext {
-    font-family: renogare;
     color: var(--gray);
     font-size: 2em;
     transition: color ease-in-out 0.25s;
@@ -114,7 +112,6 @@ p {
 }
 
 .backbuttontext {
-    font-family: renogare;
     color: white;
 }
 

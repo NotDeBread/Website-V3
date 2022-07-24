@@ -52,6 +52,7 @@ html {
     font-size: 62.5%;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    font-family: renogare;
 }
 
 html::-webkit-scrollbar {
@@ -59,7 +60,6 @@ html::-webkit-scrollbar {
 }
 
 ul {
-    font-family: renogare;
     height: 50px;
     display: flex;
     flex-direction: row-reverse;
@@ -67,7 +67,6 @@ ul {
 
 p {
     color: white;
-    font-family: renogare;
 }
 
 .navimg {
@@ -94,22 +93,22 @@ p {
 .navtext {
     text-align: right;
     float: right;
-    color: var(--gray);
+    color: white;
     padding: 1em;
     list-style: none;
     font-size: 1.5em;
-    transition: font-size ease-in-out 0.25s;
-    cursor: not-allowed;
+    transition: transform ease-in-out 0.25s;
+    cursor: pointer;
 }
 
 .navtext:hover {
-    font-size: 1.6em;
+    transform: scale(110%);
 }
 
 .line {
     height: 3px;
     width: 0;
-    background-color: var(--gray);
+    background-color: white;
     transition: width ease-in-out 0.25s;
 }
 
@@ -137,7 +136,6 @@ p {
 
 .pretitle {
     font-size: 3em;
-    font-family: renogare;
     color: white;
     padding: 0;
     margin: 0;
@@ -166,13 +164,14 @@ p {
 
 .dbanimation {
     width: 346px;
-    margin: auto;
+    position: relative;
     cursor: pointer;
+    bottom: 20;
 }
 
 .dbanimationcenter {
     display: grid;
-    align-items: center;
+    justify-content: center;
     width: 100%;
     bottom: 0;
 }
@@ -260,6 +259,7 @@ p {
     transition: transform ease-in-out 0.25s, border ease-in-out 0.25s, border-width ease-in-out 0.25s;
     cursor: pointer;
     transform: scale(100%);
+    place-items: center;
 }
 
 .box2:hover .box2T {
@@ -288,22 +288,6 @@ p {
 
 .box2:hover .notpublic {
     opacity: 100%;
-}
-
-.alert {
-    background-color: yellow;
-    width: 125px;
-    text-align: center;
-    border-radius: 10px;
-    position: absolute;
-    right: -5px;
-    top: -5px;
-}
-
-.alert p {
-    color: black;
-    margin: 0;
-    font-size: 1.25em;
 }
 
 .footer {
