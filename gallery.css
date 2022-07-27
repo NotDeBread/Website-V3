@@ -119,24 +119,32 @@ p {
 }
 
 .art:hover {
-    transform: scale(110%)
+    transform: scale(125%)
 }
 
-.art1 {
+.artmargin {
     text-align: center;
     margin-top: 250px;
 }
 
-.art1-text {
+.art-text {
     font-size: 2em;
+    margin-bottom: 0;
+}
+
+.art2 {
+    text-align: center;
+}
+
+.art-subtitle {
+    color: grey;
+    margin-top: 0;
+    font-size: 1.25em;
 }
 
 .soon {
-    position: absolute;
     width: 100%;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--bg2);
     text-align: center;
 }
 
@@ -161,6 +169,10 @@ p {
 .subtext {
     text-align: center;
     font-size: 1.25em;
+    background-color: var(--bg2);
+    margin: 0;
+    margin-top: 3px;
+    padding: 5px;
 }
 
 .channel-link {

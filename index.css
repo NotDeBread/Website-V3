@@ -290,26 +290,29 @@ p {
     opacity: 100%;
 }
 
-.footer {
+.footer-whole {
     background-image: url(images/bg.png);
     height: 50px;
     margin-bottom: 15px;
     margin-top: 25px;
 }
 
-.footergrid {
+.footer {
+    width: 200px;
+    height: 50px;
     display: grid;
+    place-items: center;
     grid-template-columns: repeat(5, 1fr);
-    font-size: 1.25em;
-    text-align: center;
-    text-decoration: none;
+    margin: auto;
 }
 
-.footertext {
-    text-decoration: none;
+.footer-icon {
+    width: 30px;
+    cursor: pointer;
+    filter: invert();
 }
 
-.footertext:hover {
+.footer-icon:hover {
     transform: scale(110%);
 }
 
