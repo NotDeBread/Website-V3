@@ -137,6 +137,12 @@ p {
     text-decoration: none;
 }
 
+.button-subtitle {
+    color: grey;
+    font-size: 0.5em;
+    margin: 0;
+}
+
 .line {
     position: absolute;
     background-color: var(--line);

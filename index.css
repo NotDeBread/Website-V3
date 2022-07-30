@@ -93,7 +93,6 @@ p {
 .navtext {
     text-align: right;
     float: right;
-    color: white;
     padding: 1em;
     list-style: none;
     font-size: 1.5em;
@@ -321,7 +320,7 @@ p {
     width: 250px;
     height: 170px;
     box-shadow: inset 0px 0px 20px 20px var(--darkbg);
-    margin-top: -167px;
+    margin-top: -171px;
 }
 
 .credits {

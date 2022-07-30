@@ -1,9 +1,9 @@
 var debread = document.getElementById('db');
 var debreadmad = false;
-var count = 3
+var count = 0
 
 setInterval(dbcountdown, 1000)
-console.log("Your mom!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+console.log("Your maturnal figure is morbidly obese.")
 
 //Changes the .png to another .png and logs it.
 
