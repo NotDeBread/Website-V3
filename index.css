@@ -155,17 +155,16 @@ p {
     z-index: 1;
 }
 
-.warning {
+.click-counter {
     text-align: center;
-    color: red;
-    font-size: 1.5em;
+    color: var(--darkerbg);
 }
 
 .dbanimation {
     width: 346px;
     position: relative;
     cursor: pointer;
-    bottom: 20;
+    bottom: -11;
 }
 
 .dbanimationcenter {
@@ -173,6 +172,39 @@ p {
     justify-content: center;
     width: 100%;
     bottom: 0;
+}
+
+.ach {
+    position: absolute;
+    z-index: 2;
+    background-color: var(--darkerbg);
+    left: -200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.ach-contents {
+    text-align: center;
+}
+
+.ach-text {
+    font-size: 1.25em;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.ach-desc {
+    color: grey;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.ach-icon {
+    width: 30px;
+    filter: invert();
+    position: absolute;
+    left: 0;
+    bottom: 7px;
 }
 
 @keyframes gradient {

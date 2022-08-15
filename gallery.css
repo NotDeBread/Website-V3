@@ -161,6 +161,10 @@ p {
     margin-top: 200px;
 }
 
+.video-bg {
+    background-color: var(--bg2);
+}
+
 .video-title {
     font-size: 2em;
     margin-top: 100px;
