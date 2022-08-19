@@ -1,0 +1,104 @@
+:root {
+  --bg: rgb(10, 8, 15);
+  --bg2: rgb(25, 20, 37);
+  --line: rgb(18, 15, 27);
+  --selected: rgb(16, 14, 26);
+  --darkbg: rgb(17, 17, 29);
+  --darkerbg: rgb(10, 10, 17);
+  --blurple: rgb(110, 84, 255);
+}
+
+@font-face {
+  font-family: renogare;
+  src: url("fonts/renogare.otf");
+}
+
+html {
+  background-color: rgb(32, 28, 45);
+  font-size: 62.5%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: renogare;
+}
+
+p {
+  color: white;
+}
+
+.backbutton {
+  background-color: var(--darkbg);
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  border: 1px var(--blurple) solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform ease-in-out 0.25s;
+}
+
+.backbutton:hover {
+  transform: scale(105%);
+}
+
+.backbuttontext {
+  color: white;
+}
+
+.title {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  text-align: center;
+  color: grey;
+}
+
+.ach-all {
+  margin: 0 auto;
+  width: 500px;
+  border-radius: 5px;
+  background-color: var(--darkbg);
+}
+
+.ach {
+  background-color: var(--darkerbg);
+  padding: 1px;
+  padding-left: 20px;
+  width: 450px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.ach-title {
+  font-size: 1.75em;
+  margin-bottom: 0;
+  color: gray;
+}
+
+.ach-desc {
+  font-size: 1.25em;
+  color: grey;
+  margin-top: 0;
+}
+
+.delete-button {
+  text-align: center;
+  background-color: var(--darkbg);
+  width: 200px;
+  margin: 0 auto;
+  outline: 1px red solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  transform: scale(105%);
+}
+
+.delete-button-text {
+  padding: 5px;
+  font-size: 1.25em;
+}

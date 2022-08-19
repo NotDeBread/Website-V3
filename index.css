@@ -1,404 +1,415 @@
 :root {
-    --bg: rgb(10, 8, 15);
-    --darkbg: rgb(17, 17, 29);
-    --darkerbg: rgb(10, 10, 17);
-    --bb: rgb(255, 206, 107);
-    --gray: rgb(100, 100, 100);
-    --bp: rgb(148, 255, 138);
+  --bg: rgb(10, 8, 15);
+  --darkbg: rgb(17, 17, 29);
+  --darkerbg: rgb(10, 10, 17);
+  --bb: rgb(255, 206, 107);
+  --gray: rgb(100, 100, 100);
+  --bp: rgb(148, 255, 138);
 }
 
 @media only screen and (max-width: 500px) {
-    body {
-        margin: 0;
-    }
-    .desktop {
-        transform: scale(0%);
-    }
-    .notcompatibleimg {
-        width: 375px;
-    }
-    .notcompatibletxt {
-        width: 100%;
-    }
+  body {
+    margin: 0;
+  }
+  .desktop {
+    transform: scale(0%);
+  }
+  .notcompatibleimg {
+    width: 375px;
+  }
+  .notcompatibletxt {
+    width: 100%;
+  }
 }
 
 .notcompatibletxt {
-    overflow: hidden;
-    font-size: 3em;
+  overflow: hidden;
+  font-size: 3em;
 }
 
 .notcompatible {
-    text-align: center;
-    position: sticky;
-    top: 10px;
-    height: 0;
+  text-align: center;
+  position: sticky;
+  top: 10px;
+  height: 0;
 }
 
 .notcompatibleimg {
-    padding: 0;
+  padding: 0;
 }
 
 @font-face {
-    font-family: renogare;
-    src: url("fonts/renogare.otf");
+  font-family: renogare;
+  src: url("fonts/renogare.otf");
 }
 
 body {
-    background-color: rgb(32, 28, 45);
-    z-index: -1;
+  background-color: rgb(32, 28, 45);
+  z-index: -1;
 }
 
 html {
-    font-size: 62.5%;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    font-family: renogare;
+  font-size: 62.5%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: renogare;
 }
 
 html::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 ul {
-    height: 50px;
-    display: flex;
-    flex-direction: row-reverse;
+  height: 50px;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 p {
-    color: white;
+  color: white;
 }
 
 .navimg {
-    text-align: left;
-    float: left;
-    list-style: none;
-    transition: font-size ease-in-out 0.25s;
-    cursor: pointer;
-    padding: 4px;
-    transition: transform ease-in-out 0.25s;
+  text-align: left;
+  float: left;
+  list-style: none;
+  transition: font-size ease-in-out 0.25s;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform ease-in-out 0.25s;
 }
 
 .navimg:hover {
-    animation: spin 1s linear infinite both;
-    cursor: wait;
+  animation: spin 1s linear infinite both;
+  cursor: wait;
 }
 
 @keyframes spin {
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .navtext {
-    text-align: right;
-    float: right;
-    padding: 1em;
-    list-style: none;
-    font-size: 1.5em;
-    transition: transform ease-in-out 0.25s;
-    cursor: pointer;
+  text-align: right;
+  float: right;
+  padding: 1em;
+  list-style: none;
+  font-size: 1.5em;
+  transition: transform ease-in-out 0.25s;
+  cursor: pointer;
 }
 
 .navtext:hover {
-    transform: scale(110%);
+  transform: scale(110%);
 }
 
 .line {
-    height: 3px;
-    width: 0;
-    background-color: white;
-    transition: width ease-in-out 0.25s;
+  height: 3px;
+  width: 0;
+  background-color: white;
+  transition: width ease-in-out 0.25s;
 }
 
 .navtext:hover .line {
-    width: 100%;
+  width: 100%;
 }
 
 .nav {
-    position: sticky;
-    top: 8px;
-    background-color: rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 18px;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .navtextleft {
-    list-style: none;
+  list-style: none;
 }
 
 .version {
-    opacity: 10%;
-    list-style: none;
-    left: 3px;
-    position: absolute;
-    top: 25px;
+  opacity: 10%;
+  list-style: none;
+  left: 3px;
+  position: absolute;
+  top: 25px;
 }
 
 .pretitle {
-    font-size: 3em;
-    color: white;
-    padding: 0;
-    margin: 0;
-    margin-top: 3em;
-    text-align: center;
+  font-size: 3em;
+  color: white;
+  padding: 0;
+  margin: 0;
+  margin-top: 3em;
+  text-align: center;
 }
 
 .title {
-    font-size: 8em;
-    color: transparent;
-    margin: 0;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-size: 1920px;
-    background-image: url(images/gradient.png);
-    animation: gradient 5s linear infinite;
-    text-align: center;
-    z-index: 1;
+  font-size: 8em;
+  color: transparent;
+  margin: 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 1920px;
+  background-image: url(images/gradient.png);
+  animation: gradient 5s linear infinite;
+  text-align: center;
+  z-index: 1;
 }
 
 .click-counter {
-    text-align: center;
-    color: var(--darkerbg);
+  text-align: center;
+  color: var(--darkerbg);
 }
 
 .dbanimation {
-    width: 346px;
-    position: relative;
-    cursor: pointer;
-    bottom: -11;
+  width: 346px;
+  position: relative;
+  cursor: pointer;
+  bottom: -11;
 }
 
 .dbanimationcenter {
-    display: grid;
-    justify-content: center;
-    width: 100%;
-    bottom: 0;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
 }
 
 .ach {
-    position: absolute;
-    z-index: 2;
-    background-color: var(--darkerbg);
-    left: -200px;
-    width: 200px;
-    border-radius: 10px;
+  position: absolute;
+  z-index: 2;
+  background-color: var(--darkerbg);
+  left: -225px;
+  padding: 5px 20px 5px 5px;
+  border-radius: 10px;
+  transition: left 0.75s cubic-bezier(0.75, -0.5, 0.25, 1.5);
+  display: flex;
+  opacity: 0;
 }
 
-.ach-contents {
-    text-align: center;
+.ach-db-contents {
+  text-align: left;
 }
 
-.ach-text {
-    font-size: 1.25em;
-    margin-top: 5px;
-    margin-bottom: 0;
+.ach-db-text {
+  font-size: 1.25em;
+  margin: 0;
 }
 
-.ach-desc {
-    color: grey;
-    margin-top: 0px;
-    margin-bottom: 5px;
+.ach-db-desc {
+  color: grey;
+  margin: 0;
 }
 
 .ach-icon {
-    width: 30px;
-    filter: invert();
-    position: absolute;
-    left: 0;
-    bottom: 7px;
+  width: 30px;
+  height: 30px;
+  filter: invert();
+  left: 0;
+  bottom: 7px;
+  margin-right: 10px;
 }
 
 @keyframes gradient {
-    0% {}
-    100% {
-        background-position: 1920px;
-    }
+  0% {
+  }
+  100% {
+    background-position: 1920px;
+  }
 }
 
 .lb {
-    height: 5px;
-    width: 50em;
-    background-color: var(--bg);
-    margin: auto;
-    opacity: 50%;
+  height: 5px;
+  width: 50em;
+  background-color: var(--bg);
+  margin: auto;
+  opacity: 50%;
 }
 
 .desc {
-    font-size: 2em;
-    text-align: center;
+  font-size: 2em;
+  text-align: center;
 }
 
 .bg1 {
-    background-image: url(images/bg.png);
-    height: 750px;
-    z-index: -1;
+  background-image: url(images/bg.png);
+  height: 750px;
+  z-index: -1;
 }
 
 .heading1 {
-    font-size: 4em;
-    text-align: center;
+  font-size: 4em;
+  text-align: center;
 }
 
 .boxall {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .box1 {
-    background-color: var(--darkbg);
-    text-align: center;
-    width: 250px;
-    height: 250px;
-    margin: 0 auto;
-    border: var(--gray) solid;
-    border-width: 1px;
-    border-radius: 1em;
-    transition: transform ease-in-out 0.25s, border ease-in-out 0.25s, border-width ease-in-out 0.25s;
-    transform: scale(100%);
-    cursor: pointer;
+  background-color: var(--darkbg);
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border: var(--gray) solid;
+  border-width: 1px;
+  border-radius: 1em;
+  transition: transform ease-in-out 0.25s, border ease-in-out 0.25s,
+    border-width ease-in-out 0.25s;
+  transform: scale(100%);
+  cursor: pointer;
 }
 
 .box1:hover {
-    transform: scale(105%);
-    border: var(--bb) solid;
-    border-width: 1px;
+  transform: scale(105%);
+  border: var(--bb) solid;
+  border-width: 1px;
 }
 
 .box1:hover .box1T {
-    color: var(--bb);
+  color: var(--bb);
 }
 
 .box1T {
-    color: var(--gray);
-    font-size: 2em;
-    transition: color ease-in-out 0.25s;
+  color: var(--gray);
+  font-size: 2em;
+  transition: color ease-in-out 0.25s;
 }
 
 .boximg1 {
-    box-shadow: inset;
+  box-shadow: inset;
 }
 
 .box2 {
-    background-color: var(--darkbg);
-    text-align: center;
-    width: 250px;
-    height: 250px;
-    margin: 0 auto;
-    border: var(--gray) solid;
-    border-width: 1px;
-    border-radius: 1em;
-    transition: transform ease-in-out 0.25s, border ease-in-out 0.25s, border-width ease-in-out 0.25s;
-    cursor: pointer;
-    transform: scale(100%);
-    place-items: center;
+  background-color: var(--darkbg);
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border: var(--gray) solid;
+  border-width: 1px;
+  border-radius: 1em;
+  transition: transform ease-in-out 0.25s, border ease-in-out 0.25s,
+    border-width ease-in-out 0.25s;
+  cursor: pointer;
+  transform: scale(100%);
+  place-items: center;
 }
 
 .box2:hover .box2T {
-    color: var(--bp);
+  color: var(--bp);
 }
 
 .box2:hover {
-    transform: scale(105%);
-    border: var(--bp) solid;
-    border-width: 1px;
+  transform: scale(105%);
+  border: var(--bp) solid;
+  border-width: 1px;
 }
 
 .box2T {
-    color: var(--gray);
-    font-size: 2em;
-    transition: color ease-in-out 0.25s;
+  color: var(--gray);
+  font-size: 2em;
+  transition: color ease-in-out 0.25s;
 }
 
 .boximg2 {
-    box-shadow: inset;
+  box-shadow: inset;
 }
 
 .box2:hover .notpublicbg {
-    width: 100%;
+  width: 100%;
 }
 
 .box2:hover .notpublic {
-    opacity: 100%;
+  opacity: 100%;
 }
 
 .footer-whole {
-    background-image: url(images/bg.png);
-    height: 50px;
-    margin-bottom: 15px;
-    margin-top: 25px;
+  background-image: url(images/bg.png);
+  height: 50px;
+  margin-bottom: 15px;
+  margin-top: 25px;
 }
 
 .footer {
-    width: 200px;
-    height: 50px;
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(5, 1fr);
-    margin: auto;
+  width: 200px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  margin: auto;
 }
 
 .footer-icon {
-    width: 30px;
-    cursor: pointer;
-    filter: invert();
+  width: 30px;
+  cursor: pointer;
+  filter: invert();
 }
 
 .footer-icon:hover {
-    transform: scale(110%);
+  transform: scale(110%);
 }
 
 .imgshadow1 {
-    position: absolute;
-    width: 250px;
-    height: 170px;
-    box-shadow: inset 0px 0px 20px 20px var(--darkbg);
-    margin-top: -171px;
+  position: absolute;
+  width: 250px;
+  height: 170px;
+  box-shadow: inset 0px 0px 20px 20px var(--darkbg);
+  margin-top: -171px;
+}
+
+.credits-sticky {
+  position: sticky;
+  top: 18px;
+  z-index: 2;
 }
 
 .credits {
-    width: 20px;
-    height: 20px;
-    overflow: hidden;
-    position: absolute;
-    z-index: 1;
-    background-color: var(--darkerbg);
-    transition: width ease-in-out 0.25s, height ease-in-out 0.25s;
-    text-align: center;
-    border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--darkerbg);
+  transition: width ease-in-out 0.25s, height ease-in-out 0.25s;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .credits:hover {
-    width: 110px;
-    height: 110px;
+  width: 110px;
+  height: 110px;
 }
 
 .creditsicon {
-    margin: 3px;
-    transition: opacity ease-in-out 0.25s;
-    position: absolute;
-    left: 3px;
+  margin: 3px;
+  transition: opacity ease-in-out 0.25s;
+  position: absolute;
+  left: 3px;
 }
 
 .credits:hover .creditsicon {
-    opacity: 0%;
+  opacity: 0%;
 }
 
 .creditstext {
-    opacity: 0;
-    transition: opacity ease-in-out 0.25s;
-    font-size: 1.2em;
-    overflow: hidden;
+  opacity: 0;
+  transition: opacity ease-in-out 0.25s;
+  font-size: 1.2em;
+  overflow: hidden;
 }
 
 .credits:hover .creditstext {
-    opacity: 100%;
+  opacity: 100%;
 }
 
 .creditlink {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .creditlink:hover {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }

@@ -1,210 +1,242 @@
 :root {
-    --bg: rgb(10, 8, 15);
-    --bg2: rgb(25, 20, 37);
-    --line: rgb(18, 15, 27);
-    --selected: rgb(16, 14, 26);
-    --darkbg: rgb(17, 17, 29);
-    --darkerbg: rgb(10, 10, 17);
-    --blurple: rgb(110, 84, 255);
+  --bg: rgb(10, 8, 15);
+  --bg2: rgb(25, 20, 37);
+  --line: rgb(18, 15, 27);
+  --selected: rgb(16, 14, 26);
+  --darkbg: rgb(17, 17, 29);
+  --darkerbg: rgb(10, 10, 17);
+  --blurple: rgb(110, 84, 255);
 }
 
 @font-face {
-    font-family: renogare;
-    src: url("fonts/renogare.otf");
+  font-family: renogare;
+  src: url("fonts/renogare.otf");
 }
 
 html {
-    background-color: rgb(32, 28, 45);
-    font-size: 62.5%;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    font-family: renogare;
+  background-color: rgb(32, 28, 45);
+  font-size: 62.5%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: renogare;
 }
 
 p {
-    color: white;
+  color: white;
 }
 
 .backbutton {
-    background-color: var(--darkbg);
-    width: 50px;
-    text-align: center;
-    padding: 5px;
-    border: 1px var(--blurple) solid;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform ease-in-out 0.25s;
+  background-color: var(--darkbg);
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  border: 1px var(--blurple) solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform ease-in-out 0.25s;
 }
 
 .backbutton:hover {
-    transform: scale(105%);
+  transform: scale(105%);
 }
 
 .backbuttontext {
-    color: white;
+  color: white;
+}
+
+.ach {
+  position: absolute;
+  z-index: 2;
+  background-color: var(--darkerbg);
+  left: -225px;
+  padding: 5px 20px 5px 5px;
+  border-radius: 10px;
+  transition: left 0.75s cubic-bezier(0.75, -0.5, 0.25, 1.5);
+  display: flex;
+}
+
+.ach-db-contents {
+  text-align: left;
+}
+
+.ach-db-text {
+  font-size: 1.25em;
+  margin: 0;
+}
+
+.ach-db-desc {
+  color: grey;
+  margin: 0;
+}
+
+.ach-db-icon {
+  width: 30px;
+  height: 30px;
+  filter: invert();
+  left: 0;
+  bottom: 7px;
+  margin-right: 10px;
 }
 
 .title {
-    text-align: center;
-    font-size: 3em;
-    margin-bottom: 0;
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 0;
 }
 
 .subtitle {
-    text-align: center;
-    font-size: 1.5em;
-    margin: 0;
-    color: grey;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0;
+  color: grey;
 }
 
 .bg {
-    position: absolute;
-    background-color: var(--bg2);
-    width: 100vw;
-    left: 0;
-    margin-top: 100px;
+  position: absolute;
+  background-color: var(--bg2);
+  width: 100vw;
+  left: 0;
+  margin-top: 100px;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
 }
 
 .grid-elements {
-    color: white;
-    font-size: 1.5em;
-    padding: 10px;
+  color: white;
+  font-size: 1.5em;
+  padding: 10px;
 }
 
 .grid-elements:hover {
-    transform: scale(110%);
-    cursor: default;
+  transform: scale(110%);
+  cursor: default;
 }
 
 .selected {
-    color: var(--selected);
+  color: var(--selected);
 }
 
 .deselected {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .deselected:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .line {
-    height: 5px;
-    width: 100%;
-    background-color: var(--line);
+  height: 5px;
+  width: 100%;
+  background-color: var(--line);
 }
 
 .all-art {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 @media only screen and (max-width: 600px) {
-    art {
-        width: 100px;
-    }
+  art {
+    width: 100px;
+  }
 }
 
 .art {
-    transition: transform ease-in-out 0.25s;
-    width: 250px;
+  transition: transform ease-in-out 0.25s;
+  width: 250px;
 }
 
 .art:hover {
-    transform: scale(125%)
+  transform: scale(125%);
 }
 
 .artmargin {
-    text-align: center;
-    margin-top: 250px;
+  text-align: center;
+  margin-top: 250px;
 }
 
 .art-text {
-    font-size: 2em;
-    margin-bottom: 0;
+  font-size: 2em;
+  margin-bottom: 0;
 }
 
 .art2 {
-    text-align: center;
+  text-align: center;
 }
 
 .art-subtitle {
-    color: grey;
-    margin-top: 0;
-    font-size: 1.25em;
+  color: grey;
+  margin-top: 0;
+  font-size: 1.25em;
 }
 
 .soon {
-    width: 100%;
-    background-color: var(--bg2);
-    text-align: center;
+  width: 100%;
+  background-color: var(--bg2);
+  text-align: center;
 }
 
 .soon-text {
-    padding: 10px;
-    font-size: 1.5em;
+  padding: 10px;
+  font-size: 1.5em;
 }
-
 
 /* Videos */
 
 .video {
-    text-align: center;
-    margin-top: 200px;
+  text-align: center;
+  margin-top: 200px;
 }
 
 .video-bg {
-    background-color: var(--bg2);
+  background-color: var(--bg2);
 }
 
 .video-title {
-    font-size: 2em;
-    margin-top: 100px;
+  font-size: 2em;
+  margin-top: 100px;
 }
 
 .subtext {
-    text-align: center;
-    font-size: 1.25em;
-    background-color: var(--bg2);
-    margin: 0;
-    margin-top: 3px;
-    padding: 5px;
+  text-align: center;
+  font-size: 1.25em;
+  background-color: var(--bg2);
+  margin: 0;
+  margin-top: 3px;
+  padding: 5px;
 }
 
 .channel-link {
-    color: rgb(148, 136, 255);
-    text-decoration: none;
+  color: rgb(148, 136, 255);
+  text-decoration: none;
 }
-
 
 /*Websites*/
 
 .websites {
-    margin-top: 200px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+  margin-top: 200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .website-button {
-    font-size: 2em;
-    background-color: var(--darkbg);
-    width: 250px;
-    outline: 1px solid var(--blurple);
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-    text-decoration: none;
+  font-size: 2em;
+  background-color: var(--darkbg);
+  width: 250px;
+  outline: 1px solid var(--blurple);
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
 }
 
 .website-button:hover {
-    transform: scale(105%);
+  transform: scale(105%);
 }
