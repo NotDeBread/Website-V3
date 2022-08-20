@@ -176,7 +176,7 @@ p {
 
 .ach {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   background-color: var(--darkerbg);
   left: -225px;
   padding: 5px 20px 5px 5px;
