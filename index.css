@@ -5,6 +5,7 @@
   --bb: rgb(255, 206, 107);
   --gray: rgb(100, 100, 100);
   --bp: rgb(148, 255, 138);
+  --ea: rgb(141, 110, 255);
 }
 
 @media only screen and (max-width: 500px) {
@@ -126,11 +127,21 @@ p {
 }
 
 .version {
+  color: white;
   opacity: 10%;
   list-style: none;
   left: 3px;
   position: absolute;
-  top: 25px;
+  top: 35px;
+  text-decoration: none;
+}
+
+.version:hover {
+  text-decoration: underline;
+}
+
+.version:active {
+  transform: scale(90%);
 }
 
 .pretitle {
@@ -164,7 +175,7 @@ p {
   width: 346px;
   position: relative;
   cursor: pointer;
-  bottom: -11;
+  bottom: -11px;
 }
 
 .dbanimationcenter {
@@ -184,6 +195,7 @@ p {
   transition: left 0.75s cubic-bezier(0.75, -0.5, 0.25, 1.5);
   display: flex;
   opacity: 0;
+  cursor: pointer;
 }
 
 .ach-db-contents {
@@ -244,7 +256,7 @@ p {
 .boxall {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .box1 {
@@ -258,7 +270,6 @@ p {
   border-radius: 1em;
   transition: transform ease-in-out 0.25s, border ease-in-out 0.25s,
     border-width ease-in-out 0.25s;
-  transform: scale(100%);
   cursor: pointer;
 }
 
@@ -294,7 +305,6 @@ p {
   transition: transform ease-in-out 0.25s, border ease-in-out 0.25s,
     border-width ease-in-out 0.25s;
   cursor: pointer;
-  transform: scale(100%);
   place-items: center;
 }
 
@@ -314,16 +324,41 @@ p {
   transition: color ease-in-out 0.25s;
 }
 
-.boximg2 {
-  box-shadow: inset;
+.box3 {
+  background-color: var(--darkbg);
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border: var(--gray) solid;
+  border-width: 1px;
+  border-radius: 1em;
+  transition: transform ease-in-out 0.25s, border ease-in-out 0.25s,
+    border-width ease-in-out 0.25s;
+  cursor: pointer;
+  place-items: center;
 }
 
-.box2:hover .notpublicbg {
-  width: 100%;
+.box3:hover .box3T {
+  color: var(--ea);
 }
 
-.box2:hover .notpublic {
-  opacity: 100%;
+.box3:hover {
+  transform: scale(105%);
+  border: var(--ea) solid;
+  border-width: 1px;
+}
+
+.box3T {
+  color: var(--gray);
+  font-size: 2em;
+  transition: color ease-in-out 0.25s;
+}
+
+@media only screen and (max-width: 1000px) {
+  .boxall {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .footer-whole {
@@ -350,6 +385,10 @@ p {
 
 .footer-icon:hover {
   transform: scale(110%);
+}
+
+.footer-icon:active {
+  transform: scale(100%);
 }
 
 .imgshadow1 {
@@ -412,4 +451,8 @@ p {
 
 .creditlink:hover {
   font-size: 1.1em;
+}
+
+.creditlink:active {
+  font-size: 1em;
 }

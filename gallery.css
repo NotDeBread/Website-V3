@@ -240,3 +240,7 @@ p {
 .website-button:hover {
   transform: scale(105%);
 }
+
+.website-button:active {
+  transform: scale(100%);
+}

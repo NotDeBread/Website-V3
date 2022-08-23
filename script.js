@@ -63,6 +63,15 @@ function dbcountdown() {
     }
 }
 
+function ach_click() {
+    ach_countdown = 2
+    document.getElementsByClassName("ach-db")[0].style.left = "-250px";
+    document.getElementsByClassName("ach-db2")[0].style.left = "-250px";
+    document.getElementsByClassName("ach-social")[0].style.left = "-250px";
+    document.getElementsByClassName("ach-spin")[0].style.left = "-1250px";
+    document.getElementsByClassName("ach-nft")[0].style.left = "-250px";
+}
+
 function db_achcountdown() {
     if (ach_countdown > 0) {
         ach_countdown -= 1;

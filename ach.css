@@ -98,6 +98,10 @@ p {
   transform: scale(105%);
 }
 
+.delete-button:active {
+  transform: scale(100%);
+}
+
 .delete-button-text {
   padding: 5px;
   font-size: 1.25em;
