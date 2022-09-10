@@ -101,7 +101,7 @@ p {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   text-align: center;
   overflow: hidden;
@@ -167,6 +167,7 @@ p {
 }
 
 .art2 {
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -243,4 +244,16 @@ p {
 
 .website-button:active {
   transform: scale(100%);
+}
+
+.eddie-all {
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.eddie {
+  margin: 0 auto;
+  width: 250px;
+  padding: 20px;
 }

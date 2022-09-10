@@ -158,6 +158,8 @@ if(document.getElementById('clickcounter')) {
 function ach_clear() {
     localStorage.removeItem('ach_total')
     localStorage.removeItem('count')
+
+    window.location.reload();
 }
 
 if(document.getElementById('ach-all')) {
