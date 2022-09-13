@@ -1,0 +1,38 @@
+:root {
+  --bg: rgb(10, 8, 15);
+  --darkbg: rgb(17, 17, 29);
+  --darkerbg: rgb(10, 10, 17);
+  --blackTP: rgba(0, 0, 0, 50%);
+}
+
+body {
+  background-color: rgb(32, 28, 45);
+  z-index: -1;
+}
+
+html {
+  font-size: 62.5%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: renogare;
+  color: white;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.title {
+  font-size: 3em;
+  background-color: var(--blackTP);
+  text-align: center;
+}
+
+.toys {
+  background-image: url(images/bg.png);
+}
