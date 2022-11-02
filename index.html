@@ -1,9 +1,3 @@
-<!--
-    TODO: 
-    -Add about section.
-    -Improve BreadBot Page.
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,180 +32,66 @@
 
 <body>
     <section class="desktop">
-        <section class="bg1">
+        <a class="version" href="https://github.com/NotDeBread/Website-V3/commits/main" target="_blank">v4.00</a>
 
-            <!--Achievents-->
-            <div style="position: sticky; top: 20px; z-index: 3;">
-                <div class="ach ach-db" onclick="ach_click()">
-                    <img src="images/icons/trophy.png" class="ach-icon">
-                    <div class="ach-db-contents">
-                        <p class="ach-db-text">Achievent Unlocked!</p>
-                        <p class="ach-db-desc">Great, now he's pissed.</p>
-                    </div>
-                </div>
+        <div class="logo-container" id="main">
+            <img src="images/logo-white.svg" class="logo">
+            <img src="images/logo-bg.png" class="logo-bg">
+            <img src="images/icons/arrow.png" class="arrow" id="arrow">
+        </div>
 
-                <div class="ach ach-db2" onclick="ach_click()">
-                    <img src="images/icons/trophy.png" class="ach-icon">
-                    <div class="ach-db-contents">
-                        <p class="ach-db-text">Achievent Unlocked!</p>
-                        <p class="ach-db-desc">Alright, you can stop now.</p>
-                    </div>
-                </div>
+        <div class="arrow-text-container">
+            <span class="arrow-text" id="arrowtext">Scroll</span>
+        </div>
 
-                <div class="ach ach-social" onclick="ach_click()">
-                    <img src="images/icons/trophy.png" class="ach-icon">
-                    <div class="ach-db-contents">
-                        <p class="ach-db-text">Achievent Unlocked!</p>
-                        <p class="ach-db-desc">Stalker.</p>
-                    </div>
-                </div>
-
-                <div class="ach ach-spin" style="left: -1250px;" onclick="ach_click()">
-                    <img src="images/icons/trophy.png" class="ach-icon">
-                    <div class="ach-db-contents">
-                        <p class="ach-db-text">Achievent Unlocked!</p>
-                        <p class="ach-db-desc">You spin me right 'round, baby, right 'round Like a record, baby, right
-                            'round, 'round, 'round You spin me right 'round, baby, right 'round Like a record, baby,
-                            right 'round, 'round, 'round</p>
-                    </div>
-                </div>
-            </div>
-            <!--Credits-->
-
-            <div class="credits-sticky">
-                <div class="credits">
-                    <p class="creditsicon">C</p>
-                    <p class="creditstext">
-                        CREDITS
-                        <br><a class="creditlink" href="https://github.com/Zesto3000" target="_blank"
-                            style="color: rgb(171, 82, 255);">Zesto</a>
-                        <br><a class="creditlink" href="https://github.com/GangstaCat" target="_blank"
-                            style="color: rgb(97, 242, 255);">GangstaCat</a>
-                        <br><a class="creditlink" href="https://github.com/ZekoTheFox" target="_blank"
-                            style="color: rgb(172, 249, 255)">Zeko</a>
-                        <br><a style="color: rgb(148, 255, 160);">ZeanZarzin</a>
-                    </p>
-                </div>
-            </div>
-
-
-            <!--NavBar-->
-
-            <ul class="nav">
-                <li class="navimg">
-                    <a><img src="images/Icon.png" width="50px" alt="debreadicon" onmouseenter="timerstart()"
-                            onmouseleave="timerstop()"></a>
-                </li>
-                <li class="navtext"><a href="art.html" style="text-decoration: none; color:white">Gallery</a>
-                    <div class="line"></div>
-                </li>
-                <li class="navtext"><a href="ach.html" style="text-decoration: none; color: white;">Achievements</a>
-                    <div class="line"></div>
-                </li>
-                <li class="navtextleft">
-                    <a class="version" href="https://github.com/NotDeBread/Website-V3/commits/main">
-                        v3.14
-                    </a>
-                </li>
-            </ul>
-
-            <!--Title-->
-
-            <div>
-                <p class="pretitle">
-                    heya, im
-                </p>
-                <p class="title">
-                    DeBread
-                </p>
-            </div>
-
-            <div class="lb"></div>
-
-            <div>
-                <p class="desc">
-                    Just some guy that does things.
-                </p>
-            </div>
-            <p class="click-counter" id="clickcounter">0</p>
-            <div class="dbanimationcenter">
-                <img class="dbanimation" src="images/debread/dbanim.png" alt="dbanimation" id="db" onclick="animate()">
-            </div>
-
-        </section>
+        <a class="bg-text" id="bgtext" href="https://twitter.com/mklgustafsson" target="_blank">Background by Mikael Gustafsson</a>
 
         <!--Projects-->
 
-        <div>
-            <p class="heading1">
-                Projects
-            </p>
+        <div class="projects-container" id="projects">
+            <div>
+                <span class="title">Projects</span>
+                <div class="boxes">
+                    <a class="box" style="cursor: pointer;" href="https://debread.space/Eddie-Accumulator/" target="_blank">
+                        <div class="box-underlay"></div>
+                        <div style="z-index: 1;">
+                            <span class="box-title">Eddie Accumulator</span><br>
+                            <span class="box-desc">Cookie Clicker, but better.</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag" style="background-color: var(--tag1);">Game</span>
+                        </div>
+                    </a>
+                    <a class="box" style="cursor: pointer;" href="bp.html">
+                        <div class="box-underlay"></div>
+                        <div style="z-index: 1;">
+                            <span class="box-title">Breaxture Pack</span><br>
+                            <span class="box-desc">A personalized version of Faithful</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag" style="background-color: grey;">Other</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <span class="title">Socials</span>
+                <div class="box">
+                    <div class="box-underlay"></div>
+                    <div style="z-index: 1;">
+                        <a class="social-link" href="https://youtube.com/notdebread" target="_blank">Youtube Channel</a><br>
+                        <a class="social-link" href="twitch.tv/notdebread" target="_blank">Twitch Channel</a><br>
+                        <a class="social-link" href="https://discord.gg/53WtGpRxfQ" target="_blank">Discord Server</a><br>
+                        <a class="social-link" href="https://twitter.com/notdebread">Twitter</a><br>
+                        <a class="social-link" href="https://github.com/notdebread" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!--Boxes-->
-
-        <div class="box-all">
-            <a href="bb.html">
-                <div class="box">
-                    <div class="box1-content box-content">
-                        <span class="box-title">Breadbot</span><br>
-                        <span>A super epic Discord bot that doesnt work half of the time.</span>
-                    </div>
-                    <img class="box-img" src="images/bbbox.png">
-                    <img class="box-pointer" src="images/icons/pointer.png">
-                    <img class="box-arrow" src="images/icons/arrow.png">
-                </div>
-            </a>
-            <a href="bp.html">
-                <div class="box">
-                    <div class="box1-content box-content">
-                        <span class="box-title">Breaxture Pack</span><br>
-                        <span>A special version of Faithful personalized to my liking.</span>
-                    </div>
-                    <img class="box-img" src="images/bpbox.png">
-                    <img class="box-pointer" src="images/icons/pointer.png">
-                    <img class="box-arrow" src="images/icons/arrow.png">
-                </div>
-            </a>
-            <a href="https://debread.space/Eddie-Accumulator/" target="_blank">
-                <div class="box">
-                    <div class="box1-content box-content">
-                        <span class="box-title">Eddie Accumulator</span><br>
-                        <span>Cookie Clicker, but better.</span>
-                    </div>
-                    <img class="box-img" src="images/eddiebox.png">
-                    <img class="box-pointer" src="images/icons/pointer.png">
-                    <img class="box-arrow" src="images/icons/arrow.png">
-                </div>
-            </a>
-        </div>
-
-        <!--Footer-->
-
-        <div class="label-footer" id="label_footer">
-            <p id="footer_text">-</p>
-        </div>
-
-        <footer class="footer-whole">
-            <a href="https://youtube.com/notdebread" target="_blank">
-                <img src="images/icons/youtube.png" class="footer-img" onmousedown="linkclicked(0)">
-            </a>
-            <a href="https://twitter.com/notdebread" target="_blank">
-                <img src="images/icons/twitter.png" class="footer-img" onmousedown="linkclicked(1)">
-            </a>
-            <a href="https://twitch.tv/notdebread" target="_blank">
-                <img src="images/icons/twitch.png" class="footer-img" onmousedown="linkclicked(2)">
-            </a>
-            <a href="https://discord.gg/53WtGpRxfQ" target="_blank">
-                <img src="images/icons/discord.png" class="footer-img" onmousedown="linkclicked(3)">
-            </a>
-            <a href="https://github.com/notdebread" target="_blank">
-                <img src="images/icons/github.png" class="footer-img" onmousedown="linkclicked(4)">
-            </a>
-        </footer>
+        <!--Links-->
     </section>
-    <script src="script.js">
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
