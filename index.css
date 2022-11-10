@@ -3,12 +3,6 @@
   --tag1: rgb(80, 156, 83);
 }
 
-@media screen and (max-width: 800px) {
-  .logo {
-    width: 75vw !important;
-  }
-}
-
 @font-face {
   font-family: light;
   src: url("fonts/Prompt-Light.ttf");
@@ -78,6 +72,7 @@ a {
 .logo {
   position: absolute;
   width: 25vw;
+  z-index: 2;
   transition: all ease-in-out 0.25s;
 }
 
@@ -103,6 +98,7 @@ a {
   width: 2vw;
   top: 95vh;
   transition: all ease-in-out 0.25s;
+  cursor: pointer;
   animation: arrow 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate
     both;
 }
@@ -196,6 +192,10 @@ a {
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 10px;
+}
+
+.social-link-container {
+  display: flex;
 }
 
 .social-link {
