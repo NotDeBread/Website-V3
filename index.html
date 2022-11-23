@@ -32,7 +32,11 @@
 
 <body>
     <section class="desktop">
-        <a class="version" href="https://github.com/NotDeBread/Website-V3/commits/main" target="_blank">v4.01</a>
+        <a class="version" href="https://github.com/NotDeBread/Website-V3/commits/main" target="_blank">v4.02</a>
+
+        <div class="refresh-container">
+            <img src="images/icons/refresh.png" class="refresh" onclick="refresh()">
+        </div>
 
         <div class="logo-container" id="main">
             <img src="images/logo-white.png" class="logo">
@@ -44,7 +48,9 @@
             <span class="arrow-text" id="arrowtext">Scroll</span>
         </div>
 
-        <a class="bg-text" id="bgtext" href="https://twitter.com/mklgustafsson" target="_blank">Background by Mikael Gustafsson</a>
+        <span id="bgtext_wrapper">
+            <a class="bg-text" id="bgtext" href="https://twitter.com/mklgustafsson" target="_blank">Background by Mikael Gustafsson</a>
+        </span>
 
         <!--Projects-->
 
@@ -52,7 +58,7 @@
             <div>
                 <span class="title">Projects</span>
                 <div class="boxes">
-                    <a class="box" style="cursor: pointer;" href="https://debread.space/Eddie-Accumulator/" target="_blank">
+                    <a class="box" href="https://debread.space/Eddie-Accumulator/" target="_blank" style="background-image: url(images/boximg0.png);">
                         <div class="box-underlay"></div>
                         <div style="z-index: 1;">
                             <span class="box-title">Eddie Accumulator</span><br>
@@ -61,8 +67,9 @@
                         <div class="tags">
                             <span class="tag" style="background-color: var(--tag1);">Game</span>
                         </div>
+                        <img src="images/icons/arrow.png" class="box-arrow">
                     </a>
-                    <a class="box" style="cursor: pointer;" href="bp.html">
+                    <a class="box" href="bp.html" style="background-image: url(images/boximg1.png);">
                         <div class="box-underlay"></div>
                         <div style="z-index: 1;">
                             <span class="box-title">Breaxture Pack</span><br>
@@ -71,12 +78,13 @@
                         <div class="tags">
                             <span class="tag" style="background-color: grey;">Other</span>
                         </div>
+                        <img src="images/icons/arrow.png" class="box-arrow">
                     </a>
                 </div>
             </div>
             <div>
                 <span class="title">Socials</span>
-                <div class="box">
+                <div class="box-2">
                     <div class="box-underlay"></div>
                     <div style="z-index: 1;">
                         <div class="social-link-container">
