@@ -38,19 +38,19 @@ function bg() {
   }
 }
 
+function checkScrollDirectionIsUp(event) {
+  if (event.wheelDelta) {
+    return event.wheelDelta > 0;
+  }
+  return event.deltaY < 0;
+}
+
 function checkScrollDirection(event) {
   if (checkScrollDirectionIsUp(event)) {
     close_()
   } else {
     open_()
   }
-}
-
-function checkScrollDirectionIsUp(event) {
-  if (event.wheelDelta) {
-    return event.wheelDelta > 0;
-  }
-  return event.deltaY < 0;
 }
 
 function open_() {
@@ -82,6 +82,8 @@ function close_() {
   document.getElementById('projects').style.setProperty('transform', 'translateX(-100vw) skewX(-25deg) rotateX(90deg)')
   document.getElementById('projects').style.setProperty('transition', 'transform ease-in 0.25s')
 }
+
+var hicount = 0
 
 function hi() {
   console.log('hi', hicount)
