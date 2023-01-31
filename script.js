@@ -54,7 +54,9 @@ function checkScrollDirection(event) {
 }
 
 function open_() {
-  document.getElementById('main').style.setProperty('height','75vh')
+  document.getElementById('main').style.setProperty('height','74vh')
+
+  document.getElementById('footer').style.setProperty('bottom','0')
 
   document.getElementById('arrow').style.setProperty('top','60vh')
   document.getElementById('arrow').style.setProperty('opacity','0')
@@ -63,13 +65,12 @@ function open_() {
   document.getElementById('arrowtext').style.setProperty('opacity','0')
 
   document.getElementById('bgtext').style.setProperty('opacity','0')
-
-  document.getElementById('projects').style.setProperty('transform', 'translateX(0) skewX(0deg) rotateX(0deg)')
-  document.getElementById('projects').style.setProperty('transition', 'transform ease-out 0.25s')
 }
 
 function close_() {
   document.getElementById('main').style.setProperty('height','100vh')
+
+  document.getElementById('footer').style.setProperty('bottom','-26px')
 
   document.getElementById('arrow').style.setProperty('top','95vh')
   document.getElementById('arrow').style.setProperty('opacity','1')
@@ -78,15 +79,66 @@ function close_() {
   document.getElementById('arrowtext').style.setProperty('opacity','1')
 
   document.getElementById('bgtext').style.setProperty('opacity','0.5')
-
-  document.getElementById('projects').style.setProperty('transform', 'translateX(-100vw) skewX(-25deg) rotateX(90deg)')
-  document.getElementById('projects').style.setProperty('transition', 'transform ease-in 0.25s')
 }
 
 var hicount = 0
+
+function fun() {
+  console.log('Hi - Sends hi in the console up to 30,000 times!')
+  console.log('     hi()')
+
+  console.log('Smooth - Decides whether or not to smooth the transition between effects')
+  console.log("     smooth(<'y' OR 'n'>, <time>)")
+
+  console.log('Big - Scales the page')
+  console.log('     big(<scale>)')
+
+  console.log('Rotate - Rotates the page')
+  console.log('     rotate(<degrees>)')
+
+  console.log('Spin - Spins the page')
+  console.log('     spin(<speed>)')
+}
 
 function hi() {
   console.log('hi', hicount)
   hicount += 1
   hi()
+}
+
+function smooth(input) {
+  if(input === 'y') {
+    document.getElementById('all').style.setProperty('transition','all ease-in-out 0.25s')
+    console.log('Smoothing ON')
+
+  } else if(input === 'n') {
+    document.getElementById('all').style.setProperty('transition','none')
+    console.log('Smoothing OFF')
+
+  } else {
+    console.log("Please put 'y' or 'n'")
+  }
+}
+
+function big(scale) {
+  document.getElementById('all').style.setProperty('scale',scale + '%')
+}
+
+function rotate(degrees) {
+  document.getElementById('all').style.setProperty('rotate', degrees + 'deg')
+}
+
+var spinactive = false
+var spindeg = 0
+
+function spin(speed) {
+  
+  setInterval(() => {
+    spindeg += speed
+    document.getElementById('all').style.setProperty('rotate', spindeg + 'deg')
+  },1)
+}
+
+function bright(brightness) {
+  document.getElementById('all').style.setProperty('filter','brightness(' + brightness + '%)')
 }

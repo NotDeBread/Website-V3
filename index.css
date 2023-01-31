@@ -1,23 +1,12 @@
 :root {
   --bg: rgb(2, 12, 32);
-  --tag1: rgb(80, 156, 83);
+  --bouncy: cubic-bezier(0, 2, 0.8, 1);
 }
 
 @font-face {
-  font-family: light;
-  src: url("fonts/Prompt-Light.ttf");
+  font-family: deca;
+  src: url("fonts/deca.ttf");
 }
-
-@font-face {
-  font-family: normal;
-  src: url("fonts/Prompt-Regular.ttf");
-}
-
-@font-face {
-  font-family: black;
-  src: url("fonts/Prompt-Black.ttf");
-}
-
 body {
   background-color: black;
   margin: 0;
@@ -29,7 +18,7 @@ html {
   font-size: 62.5%;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  font-family: normal;
+  font-family: deca;
   color: white;
 }
 
@@ -46,6 +35,10 @@ ul {
 a {
   text-decoration: none;
   color: white;
+}
+
+.all {
+  rotate: 0;
 }
 
 .version {
@@ -147,135 +140,237 @@ a {
   transition: all ease-in-out 0.25s;
 }
 
+.projects-border {
+  height: 5px;
+  width: 100vw;
+  background-color: rgb(10, 10, 10);
+}
+
+.projects-title {
+  font-size: 3em;
+  font-weight: 900;
+}
+
 .projects-container {
-  height: 25vh;
-  padding: 0.25vw;
-  z-index: -2;
   display: flex;
-  margin: 0.5vw;
-  justify-content: space-between;
-  gap: 10px;
-  transform: translateX(-100vw) skewX(-25deg) rotateX(90deg);
-  transition: transform ease-out 0.25s;
-  background-image: url(images/projectsbg.png);
-  background-size: 250px;
-  background-position: 0 100px;
-  animation: projectsbg 5s linear infinite;
+  padding: 25px;
+  gap: 25px;
 }
 
-@keyframes projectsbg {
-  0% {
-    background-position: 0 100px;
-  }
-  100% {
-    background-position: 250px 350px;
-  }
-}
-
-.title {
-  font-family: black;
-  font-size: 1.75vw;
-}
-
-.boxes {
-  display: flex;
-  gap: 20px;
-}
-
-.box {
-  width: 20vw;
-  height: 3vw;
-  background-color: black;
-  box-shadow: 0px 0px 0px 0px black, 0px 0px 0px 1px white,
-    inset 0px 0px 75px 10px black;
-  padding: 0.5vw;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
+.project {
+  box-shadow: 0px 0px 0px 2px black, 0px 0px 0px 4px white;
   border-radius: 5px;
+  padding: 5px;
+  height: 75px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
-  background-size: cover;
-  transition: box-shadow ease-in-out 0.25s, height ease-in-out 0.25s;
+  user-select: none;
+  transition: height var(--bouncy) 0.25s;
 }
 
-.box:hover {
-  box-shadow: 0px 0px 0px 3px black, 0px 0px 0px 4px white,
-    inset 0px 0px 85px 5px black;
-  height: 5vw;
+.project:hover {
+  height: 100px;
 }
 
-.box:hover .box-title {
+.project:hover .project-text {
   letter-spacing: 1px;
 }
 
-.box-2 {
-  width: 20vw;
-  background-color: black;
-  outline: 1px solid white;
-  padding: 0.5vw;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 5px;
+.project:hover .p-bg1 {
+  box-shadow: 0px 0px 50px 5px inset black;
 }
 
-.box-underlay {
+.project:active {
+  height: 85px;
+}
+
+.project:active .project-text {
+  letter-spacing: unset;
+}
+
+.project-text {
+  position: absolute;
+  z-index: 2;
+  left: 5px;
+  transition: letter-spacing var(--bouncy) 0.25s;
+}
+
+.p-bg1 {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0.5vw;
-  left: 0.5vw;
-  z-index: -1;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 25%);
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 100px 5px inset black;
+  background-image: url(images/boximg0.png);
+  background-size: 350px;
+  transition: box-shadow ease-in-out 0.25s;
 }
 
-.box-title {
-  font-size: 2vh;
-  font-weight: 600;
-  transition: all ease-in-out 0.25s;
-}
-
-.box-desc {
-  font-size: 1.5vh;
-  font-weight: 300;
-}
-
-.tag {
-  font-weight: 600;
-  font-size: 0.75vw;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-radius: 10px;
-}
-
-.box-arrow {
+.s-bg {
   position: absolute;
-  bottom: 5px;
-  right: 50px;
-  width: 2vw;
-  opacity: 0;
-  transform: rotate(-90deg);
-  transition: right ease-in-out 0.25s, opacity ease-in-out 0.25s;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 100px 5px inset black;
+  background-size: 350px;
+  transition: box-shadow ease-in-out 0.25s;
 }
 
-.box:hover .box-arrow {
-  right: 5px;
-  opacity: 1;
+.project-title {
+  font-size: 2.25em;
+  font-weight: 900;
 }
 
-.social-link-container {
+.project-desc {
+  font-size: 1.25em;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.projects-bg {
+  position: absolute;
+  top: 0;
+  background-size: 250px;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  animation: bg infinite 5s linear;
+  background-image: url(images/projectsbg.png);
+}
+
+@keyframes bg {
+  100% {
+    background-position: 250px 250px;
+  }
+}
+
+.projects-footer {
+  position: absolute;
+  bottom: -26px;
+  border-top: 1px solid;
+  width: calc(100vw - 10px);
+  height: 25px;
+  display: flex;
+  padding-left: 10px;
+  background-color: black;
+  transition: bottom ease-in-out 0.25s;
+}
+
+.projects-tab {
+  font-size: 1.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  transition: letter-spacing var(--bouncy) 0.25s;
+}
+
+.projects-tab:hover {
+  letter-spacing: 1px;
+  background-color: rgb(20, 20, 20);
+}
+
+.projects-tab:active {
+  letter-spacing: 0px;
+  background-color: rgb(30, 30, 30);
+}
+
+.chat-all {
   display: flex;
 }
 
-.social-link {
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1.75vh;
-  transition: all ease-in-out 0.25s;
+.chat-left {
+  width: 80vw;
 }
 
-.social-link:hover {
-  letter-spacing: 1px;
-  text-decoration: underline;
+.chat-right {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.chat-body {
+  height: 175px;
+  background-color: rgb(10, 10, 10);
+}
+
+.chat-input-container {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-input {
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  color: white;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(20, 20, 20);
+  font-family: deca;
+}
+
+.signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.signin-label {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.signin-input {
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-family: deca;
+  padding: 5px;
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.password {
+  text-decoration: dotted;
+}
+
+.signin-button {
+  background-color: rgb(30, 30, 30);
+  color: white;
+  border: none;
+  padding: 5px;
+  font-weight: 700;
+  font-family: deca;
+  border-radius: 5px;
+}
+
+.profile {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.chat-pfp {
+  filter: invert(25%);
+  width: 100px;
+}
+
+.chat-name {
+  font-size: 2em;
+  font-weight: 800;
 }
