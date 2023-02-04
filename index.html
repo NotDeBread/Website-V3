@@ -1,5 +1,3 @@
-<!--FOR EDDIE ACCUMULATOR: git submodule update --remote-->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" type="image/png" href="images/IconDark.png">
+    <link rel="shortcut icon" type="image/png" href="media/favicon/IconDark.png">
     <title>BreD</title>
 
     <!-- Primary Meta Tags -->
@@ -28,151 +26,81 @@
     <meta property="twitter:title" content="DeBread's Epic Website">
     <meta property="twitter:description" content="Debread's super epic and amazing website.">
     <meta property="twitter:image" content="https://cdn.discordapp.com/attachments/805608363291181068/1017239991065251850/FoxBeeg.jpg">
-
 </head>
 
+<body id="all">
 
-<body id="all" class="all">
-    <section class="desktop">
-        <a class="version" href="https://github.com/NotDeBread/Website-V3/commits/main" target="_blank">v4.04</a>
+    <div class="loader" id="loader">
+        <img src="media/Spin.png" class="loader-img">
+        <span id="loader_txt">Loading</span>
+    </div>
 
-        <div class="refresh-container">
-            <img src="images/icons/refresh.png" class="refresh" onclick="refresh()">
+    <div class="main" id="main">
+        <div class="logo-container">
+            <img src="media/logo.png" class="logo">
         </div>
 
-        <div class="logo-container" id="main">
-            <img src="images/logo-white.png" class="logo">
-            <img src="images/logo-bg.png" class="logo-bg">
-            <img src="images/icons/arrow.png" class="arrow" id="arrow" onclick="open_()">
+        <div class="bg-vid-container">
+            <video src="media/bg.mp4" class="bg-vid" autoplay loop id="video"></video>
         </div>
 
-        <div class="arrow-text-container">
-            <span class="arrow-text" id="arrowtext">Scroll</span>
+        <div class="arrow-container" id="arrow">
+            <span>Scroll</span>
+            <img src="media/icons/arrow.png" class="arrow" onclick="open_()">
         </div>
+    </div>
+    <a href="https://github.com/NotDeBread/Website-V3/commits/main" target="_blank" class="version">v4.05</a>
 
-        <span id="bgtext_wrapper">
-            <a class="bg-text" id="bgtext" href="https://twitter.com/mklgustafsson" target="_blank">Background by Mikael Gustafsson</a>
-        </span>
-
-        <!--Projects-->
-
-        <div class="projects-border"></div>
-
-        <section id="projects_tab">
-            <div style="position: relative;">
-                <span class="projects-title">//Projects</span>
-
-                <section class="projects-container">
-                    <a class="project" href="https://debread.space/Eddie-Accumulator/" target="_blank">
-                        <div class="project-text">
-                            <span class="project-title">Eddie Accumulator</span><br>
-                            <span class="project-desc">Cookie Clicker, but better</span>
-                        </div>
-                        <div class="p-bg1"></div>
-                    </a>
-                    <div class="project">
-                        <div class="project-text">
-                            <span class="project-title">Unnamed Card Game</span><br>
-                            <span class="project-desc">Coming Soon!</span>
-                        </div>
-                        <div class="p-bg1" style="background-image: url(images/project2.png);"></div>
-                    </div>
-                </section>
-
-                <div class="projects-bg"></div>
-            </div>
-        </section>
-
-        <section id="links_tab">
-            <div style="position: relative;">
-                <span class="projects-title">//Socials</span>
-
-                <section class="projects-container">
-                    <a class="project" href="https://youtube.com/notdebread" target="_blank">
-                        <div class="project-text">
-                            <span class="project-title">YouTube Channel</span><br>
-                            <span class="project-desc">Check out my "awesome" videos!</span>
-                        </div>
-                        <div class="s-bg" style="background-image: url(images/social1.png);"></div>
-                    </a>
-                    <a class="project" href="https://twitch.tv/notdebread" target="_blank">
-                        <div class="project-text">
-                            <span class="project-title">Twitch Channel</span><br>
-                            <span class="project-desc">Don't expect me to stream any time soon!</span>
-                        </div>
-                        <div class="s-bg" style="background-image: url(images/social2.png);"></div>
-                    </a>
-                    <a class="project" href="https://twitter.com/notdebread" target="_blank">
-                        <div class="project-text">
-                            <span class="project-title">Twitter</span><br>
-                            <span class="project-desc">Don't</span>
-                        </div>
-                        <div class="s-bg" style="background-image: url(images/social3.png);"></div>
-                    </a>
-                    <a class="project" href="https://discord.gg/53WtGpRxfQ" target="_blank">
-                        <div class="project-text">
-                            <span class="project-title">Discord Server</span><br>
-                            <span class="project-desc">Join my super based server!</span>
-                        </div>
-                        <div class="s-bg" style="background-image: url(images/social4.png);"></div>
-                    </a>
-                    <a class="project" href="https://github.com/notdebread" target="_blank">
-                        <div class="project-text">
-                            <span class="project-title">GitHub</span><br>
-                            <span class="project-desc">Only Eddie here</span>
-                        </div>
-                        <div class="s-bg" style="background-image: url(images/social5.png);"></div>
-                    </a>
-                </section>
-
-                <div class="projects-bg"></div>
-            </div>
-        </section>
-
-        <section id="chat_tab" class="chat-all">
-            <section class="chat-left">
-                <div class="chat-body">
-                    <span>This is some text! Wowie!</span>
-                </div>
-                <div class="chat-input-container">
-                    <input type="text" class="chat-input">
-                </div>
-            </section>
-            <section class="chat-right">
-                <section class="profile">
-                    <img src="images/icons/user.png" class="chat-pfp">
-                    <span id="name" class="chat-name">This is your name!!!</span>
-                </section>
-                <section class="signin">
-                    <span class="signin-label">Username</span>
-                    <input class="signin-input">
-                    <span class="signin-label">Password</span>
-                    <input class="signin-input password">
-                    <div>
-                        <button class="signin-button">Sign In</button>
-                        <button class="signin-button">Sign Up</button>
-                    </div>
-                </section>
-            </section>
-        </section>
-
-
-        <div class="projects-footer" id="footer">
-            <div class="projects-tab" onclick="projects()">
-                <span id="tab_projects">Projects</span>
-            </div>
-            <div class=" projects-tab" onclick="tab = 2; tabupdate()">
-                <span id="tab_links">Socials</span>
-            </div>
-            <div class=" projects-tab">
-                <span id="tab_chat" style="color: grey;">Chat</span>
+    <section class="footer">
+        <span class="footer-header" id="footer-header">// Projects</span>
+        <div id="projects">
+            <div class="boxes">
+                <a class="box" style="background-image: url(media/boxes/projects/1.png);" href="https://debread.space/Eddie-Accumulator" target="_blank">
+                    <span class="box-title">Eddie Accumulator</span><br>
+                    <span class="box-desc">Cookie Clicker, but better</span>
+                </a>
+                <a class="box" style="background-image: url(media/boxes/projects/2.png);">
+                    <span class="box-title">Unnamed Card Game</span><br>
+                    <span class="box-desc">Coming Soon!</span>
+                </a>
             </div>
         </div>
 
-        <!--Links-->
+        <div id="socials" style="display: none;">
+            <div class="boxes">
+                <a class="box" style="background-image: url(media/boxes/socials/1.png);" href="https://www.youtube.com/notdebread" target="_blank">
+                    <span class="box-title">YouTube Channel</span><br>
+                    <span class="box-desc">Check out my "awesome" videos!</span>
+                </a>
+                <a class="box" style="background-image: url(media/boxes/socials/2.png);" href="https://www.twitch.tv/notdebread" target="_blank">
+                    <span class="box-title">Twitch Channel</span><br>
+                    <span class="box-desc">Don't expect me to stream any<br> time soon!</span>
+                </a>
+                <a class="box" style="background-image: url(media/boxes/socials/3.png);" href="https://twitter.com/notdebread" target="_blank">
+                    <span class="box-title">Twitter</span><br>
+                    <span class="box-desc">Don't</span>
+                </a>
+                <a class="box" style="background-image: url(media/boxes/socials/4.png);" href="https://discord.com/invite/53WtGpRxfQ" target="_blank">
+                    <span class="box-title">Discord Server</span><br>
+                    <span class="box-desc">Join my super based server!</span>
+                </a>
+                <a class="box" style="background-image: url(media/boxes/socials/5.png);" href="https://github.com/notdebread" target="_blank">
+                    <span class="box-title">GitHub</span><br>
+                    <span class="box-desc">Only Eddie here</span>
+                </a>
+            </div>
+        </div>
+        <div class="tabs" id="tabs">
+            <div class="tab" onclick="tab(0)" id="tab0">
+                <span>Projects</span>
+            </div>
+            <div class="tab" onclick="tab(1)" id="tab1">
+                <span>Socials</span>
+            </div>
+        </div>
     </section>
+
     <script src="script.js"></script>
-    <script src="chat.js"></script>
 </body>
 
 </html>

@@ -1,144 +1,172 @@
+const video = document.getElementById('video')
+const loader = document.getElementById('loader')
+
+var loadingDone = false
+
+setInterval(() => {
+    if(video.readyState === 4) {
+        setTimeout(() => {
+            document.getElementById('loader_txt').innerText = 'Done!'
+            loadingDone = true
+            setTimeout(() => {
+                loader.style.setProperty('opacity','0')
+                setTimeout(() => {
+                    loader.style.setProperty('display','none')
+                }, 500);
+            }, 500);
+        }, 1000);
+    }
+}, 500);
+
+loader_txt()
+
+function loader_txt() {
+    if(loadingDone === false) {
+        document.getElementById('loader_txt').innerText = 'Loading'
+    }
+    setTimeout(() => {
+        if(loadingDone === false) {
+        document.getElementById('loader_txt').innerText = 'Loading.'
+        }
+        setTimeout(() => {
+            if(loadingDone === false) {
+                document.getElementById('loader_txt').innerText = 'Loading..'
+            }
+            setTimeout(() => {
+                if(loadingDone === false) {
+                    document.getElementById('loader_txt').innerText = 'Loading...'
+                }
+                setTimeout(() => {
+                    loader_txt()
+                }, 500);
+            }, 500);
+        }, 500);
+    }, 500);
+}
+
 document.body.addEventListener('wheel', checkScrollDirection);
 
-let background = 0
-
-function refresh() {
-  background = Math.round(Math.random() * 7)
-  bg()
-}
-
-background = Math.round(Math.random() * 7)
-
-bg()
-function bg() {
-  if(background === 0) {
-    document.getElementById('main').style.setProperty('background-image', 'url(images/bg0.png)')
-    document.getElementById('bgtext_wrapper').innerHTML = '<a class="bg-text" id="bgtext" href="https://twitter.com/mklgustafsson" target="_blank">Background by Mikael Gustafsson</a>'
-  } else if(background === 1) {
-    document.getElementById('main').style.setProperty('background-image', 'url(images/bg1.png)')
-    document.getElementById('bgtext_wrapper').innerHTML = '<a class="bg-text" id="bgtext">Build made by Eric<br>Screenshot from me</a>'
-  } else if(background === 2) {
-    document.getElementById('main').style.setProperty('background-image', 'url(images/bg2.png)')
-    document.getElementById('bgtext_wrapper').innerHTML = '<a class="bg-text" id="bgtext">Screenshot from me</a>'
-  } else if(background === 3) {
-    document.getElementById('main').style.setProperty('background-image', 'url(images/bg3.png)')
-    document.getElementById('bgtext_wrapper').innerHTML = '<a class="bg-text" id="bgtext">Screenshot from me</a>'
-  } else if(background === 4) {
-    document.getElementById('main').style.setProperty('background-image', 'url(images/bg4.png)')
-    document.getElementById('bgtext_wrapper').innerHTML = '<a class="bg-text" id="bgtext">Screenshot from me</a>'
-  } else if(background === 5) {
-    document.getElementById('main').style.setProperty('background-image', 'url(images/bg5.png)')
-    document.getElementById('bgtext_wrapper').innerHTML = '<a class="bg-text" id="bgtext">Screenshot from me</a>'
-  } else if(background === 6) {
-    document.getElementById('main').style.setProperty('background-image', 'url(images/bg6.png)')
-    document.getElementById('bgtext_wrapper').innerHTML = '<a class="bg-text" id="bgtext">Screenshot from me</a>'
-  } else if(background === 7) {
-    document.getElementById('main').style.setProperty('background-image', 'url(images/bg7.png)')
-    document.getElementById('bgtext_wrapper').innerHTML = '<a class="bg-text" id="bgtext">Screenshot from me</a>'
-  }
-}
-
 function checkScrollDirectionIsUp(event) {
-  if (event.wheelDelta) {
-    return event.wheelDelta > 0;
+    if (event.wheelDelta) {
+      return event.wheelDelta > 0;
+    }
+    return event.deltaY < 0;
   }
-  return event.deltaY < 0;
+  
+  function checkScrollDirection(event) {
+    if (checkScrollDirectionIsUp(event)) {
+      close_()
+    } else {
+      open_()
+    }
 }
 
-function checkScrollDirection(event) {
-  if (checkScrollDirectionIsUp(event)) {
-    close_()
-  } else {
-    open_()
-  }
-}
+const main = document.getElementById('main')
+const tabs = document.getElementById('tabs')
 
 function open_() {
-  document.getElementById('main').style.setProperty('height','74vh')
-
-  document.getElementById('footer').style.setProperty('bottom','0')
-
-  document.getElementById('arrow').style.setProperty('top','60vh')
-  document.getElementById('arrow').style.setProperty('opacity','0')
-
-  document.getElementById('arrowtext').style.setProperty('bottom','60vh')
-  document.getElementById('arrowtext').style.setProperty('opacity','0')
-
-  document.getElementById('bgtext').style.setProperty('opacity','0')
+    main.style.setProperty('height','calc(100vh - 250px)')
+    tabs.style.setProperty('bottom','0')
+    document.getElementById('arrow').style.setProperty('bottom','250px')
+    document.getElementById('arrow').style.setProperty('opacity','0')
 }
 
 function close_() {
-  document.getElementById('main').style.setProperty('height','100vh')
+    main.style.setProperty('height','100vh')
+    tabs.style.setProperty('bottom','-26px')
+    document.getElementById('arrow').style.setProperty('bottom','25px')
+    document.getElementById('arrow').style.setProperty('opacity','1')
+}
 
-  document.getElementById('footer').style.setProperty('bottom','-26px')
+var tab_selected = 0
 
-  document.getElementById('arrow').style.setProperty('top','95vh')
-  document.getElementById('arrow').style.setProperty('opacity','1')
+function tab(num) {
+    tab_selected = num
+    tabupdate()
+}
 
-  document.getElementById('arrowtext').style.setProperty('bottom','5vh')
-  document.getElementById('arrowtext').style.setProperty('opacity','1')
+tabupdate()
 
-  document.getElementById('bgtext').style.setProperty('opacity','0.5')
+function tabupdate() {
+    if(tab_selected === 0) {
+        document.getElementById('projects').style.setProperty('display','flex')
+        document.getElementById('socials').style.setProperty('display','none')
+
+        document.getElementById('tab0').style.setProperty('font-weight','900')
+        document.getElementById('tab1').style.setProperty('font-weight','unset')
+
+        document.getElementById('footer-header').innerText = '// Projects'
+    }
+
+    if(tab_selected === 1) {
+        document.getElementById('projects').style.setProperty('display','none')
+        document.getElementById('socials').style.setProperty('display','flex')
+
+        document.getElementById('tab0').style.setProperty('font-weight','unset')
+        document.getElementById('tab1').style.setProperty('font-weight','900')
+
+        document.getElementById('footer-header').innerText = '// Socials'
+    }
+}
+
+function fun() {
+    console.log('Hi - Sends hi in the console up to 30,000 times!')
+    console.log('     hi()')
+  
+    console.log('Smooth - Decides whether or not to smooth the transition between effects')
+    console.log("     smooth(<'y' OR 'n'>, <time>)")
+  
+    console.log('Big - Scales the page')
+    console.log('     big(<scale>)')
+  
+    console.log('Rotate - Rotates the page')
+    console.log('     rotate(<degrees>)')
+  
+    console.log('Spin - Spins the page')
+    console.log('     spin(<speed>)')
 }
 
 var hicount = 0
 
-function fun() {
-  console.log('Hi - Sends hi in the console up to 30,000 times!')
-  console.log('     hi()')
-
-  console.log('Smooth - Decides whether or not to smooth the transition between effects')
-  console.log("     smooth(<'y' OR 'n'>, <time>)")
-
-  console.log('Big - Scales the page')
-  console.log('     big(<scale>)')
-
-  console.log('Rotate - Rotates the page')
-  console.log('     rotate(<degrees>)')
-
-  console.log('Spin - Spins the page')
-  console.log('     spin(<speed>)')
-}
-
 function hi() {
-  console.log('hi', hicount)
-  hicount += 1
-  hi()
-}
-
-function smooth(input) {
-  if(input === 'y') {
-    document.getElementById('all').style.setProperty('transition','all ease-in-out 0.25s')
-    console.log('Smoothing ON')
-
-  } else if(input === 'n') {
-    document.getElementById('all').style.setProperty('transition','none')
-    console.log('Smoothing OFF')
-
-  } else {
-    console.log("Please put 'y' or 'n'")
-  }
+    for(let i = 1; i > 0;) {
+      console.log('hi :)', hicount)
+      hicount++
+    }
 }
 
 function big(scale) {
-  document.getElementById('all').style.setProperty('scale',scale + '%')
+    document.getElementById('all').style.setProperty('scale',scale + '%')
 }
-
+  
 function rotate(degrees) {
-  document.getElementById('all').style.setProperty('rotate', degrees + 'deg')
+    document.getElementById('all').style.setProperty('rotate', degrees + 'deg')
 }
-
+  
 var spinactive = false
 var spindeg = 0
-
-function spin(speed) {
   
-  setInterval(() => {
-    spindeg += speed
-    document.getElementById('all').style.setProperty('rotate', spindeg + 'deg')
-  },1)
+function spin(speed) {    
+    setInterval(() => {
+        spindeg += speed
+        document.getElementById('all').style.setProperty('rotate', spindeg + 'deg')
+    },1)
+}
+  
+function bright(brightness) {
+    document.getElementById('all').style.setProperty('filter','brightness(' + brightness + '%)')
 }
 
-function bright(brightness) {
-  document.getElementById('all').style.setProperty('filter','brightness(' + brightness + '%)')
+function smooth(input) {
+    if(input === 'y') {
+      document.getElementById('all').style.setProperty('transition','all ease-in-out 0.25s')
+      console.log('Smoothing ON')
+      
+    } else if(input === 'n') {
+      document.getElementById('all').style.setProperty('transition','none')
+      console.log('Smoothing OFF')
+      
+    } else {
+      console.log("Please put 'y' or 'n'")
+    }
 }

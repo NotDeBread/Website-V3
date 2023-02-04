@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stats.css">
+    <link rel="shortcut icon" id="favicon" type="image/png" href="images/icon.png">
+    <title>Eddie Accumulator - Achievements</title>
+</head>
+
+<body>
+    <a class="backbutton" href="index.html">
+        <p>Back</p>
+    </a>
+    <div class="all-container">
+        <section class="all">
+            <section class="left">
+                <div class="stats-container">
+                    <p class="stats-title">Statistics</p>
+                    <div class="stats-all">
+                        <div class="stat-container">
+                            <div class="stat">
+                                <span class="stats-name">Total Eddie Orbs: </span>
+                                <span class="stats-text" id="stat_eddieorbs">0</span><br>
+                            </div>
+                            <div class="stat-img-container">
+                                <img src="images/stats/eddie.png" class="stat-img">
+                            </div>
+                        </div>
+                        <div class="stat-container">
+                            <div class="stat">
+                                <span class="stats-name">Eddie Orbs Spent: </span>
+                                <span class="stats-text" id="stat_eddieorbsspent">0</span><br>
+                            </div>
+                            <div class="stat-img-container">
+                                <img src="images/stats/eddiespent.png" class="stat-img">
+                            </div>
+                        </div>
+                        <div class="stat-container">
+                            <div class="stat">
+                                <span class="stats-name">Times Clicked: </span>
+                                <span class="stats-text" id="stat_timesclicked">0</span><br>
+                            </div>
+                            <div class="stat-img-container">
+                                <img src="images/stats/clicked.png" class="stat-img">
+                            </div>
+                        </div>
+                        <div class="stat-container">
+                            <div class="stat">
+                                <span class="stats-name">Golden Eddies Clicked: </span>
+                                <span class="stats-text" id="stat_goldeneddies">0</span> <span id="stat_ge_precent"></span><br>
+                            </div>
+                            <div class="stat-img-container">
+                                <img src="images/stats/goldeneddie.png" class="stat-img">
+                            </div>
+                        </div>
+                        <div class="stat-container">
+                            <div class="stat">
+                                <span class="stats-name">Golden Eddies Spawned: </span>
+                                <span class="stats-text" id="stat_goldeneddies_s">0</span><br>
+                            </div>
+                            <div class="stat-img-container">
+                                <img src="images/stats/goldeneddiesspawned.png" class="stat-img">
+                            </div>
+                        </div>
+                        <div class="stat-container">
+                            <div class="stat">
+                                <span class="stats-name">Trains Clicked: </span>
+                                <span class="stats-text" id="stat_trainsclicked">0</span><br>
+                            </div>
+                            <div class="stat-img-container">
+                                <img src="images/stats/train.png" class="stat-img">
+                            </div>
+                        </div>
+                        <div class="stat-container">
+                            <div class="stat">
+                                <span class="stats-name">Spells Used: </span>
+                                <span class="stats-text" id="stat_spells">0</span><br>
+                            </div>
+                            <div class="stat-img-container">
+                                <img src="images/stats/spell.png" class="stat-img">
+                            </div>
+                        </div>
+                        <div class="stat-container">
+                            <div class="stat">
+                                <span class="stats-name">Total Flasks: </span>
+                                <span class="stats-text" id="stat_flasks">0</span><br>
+                            </div>
+                            <div class="stat-img-container">
+                                <img src="images/stats/flask.png" class="stat-img">
+                            </div>
+                        </div>
+                        <div class="stat-container">
+                            <div class="stat">
+                                <span class="stats-name">Flasks Used: </span>
+                                <span class="stats-text" id="stat_flasks_used">0</span><br>
+                            </div>
+                            <div class="stat-img-container">
+                                <img src="images/stats/flaskuse.png" class="stat-img">
+                            </div>
+                        </div>
+                        <div class="stat-container">
+                            <div class="stat">
+                                <span class="stats-name">Upgrades Bought: </span>
+                                <span class="stats-text" id="stat_upgrades">0</span>
+                                <span class="stats-text">/ 39</span><br>
+                            </div>
+                            <div class="stat-img-container">
+                                <img src="images/stats/upgrade.png" class="stat-img">
+                            </div>
+                        </div>
+                        <div class="stat-container">
+                            <div class="stat">
+                                <span class="stats-name">Achievements Unlocked: </span>
+                                <span class="stats-text" id="stat_achievements">0</span>
+                                <span class="stats-text">/ 18</span><br>
+                            </div>
+                            <div class="stat-img-container">
+                                <img src="images/stats/achievement.png" class="stat-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="eddie-orbs">
+                    <span class="eddie-orbs-label">Current Eddie Orbs</span><br>
+                    <div class="eddie-orbs-count">
+                        <span id="eddieorbs">-</span>
+                    </div>
+                    <div class="eddie-orbs-other-container">
+                        <div class="eddie-orbs-other">
+                            <span>EPS:</span><br>
+                            <span id="eps" class="ps"></span>
+                        </div>
+                        <div class="eddie-orbs-other">
+                            <span>EPC:</span><br>
+                            <span id="epc" class="ps"></span>
+                        </div>
+                        <div class="eddie-orbs-other">
+                            <span>Total:</span><br>
+                            <span id="total" class="ps"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upgrades-container">
+                    <div class="upgrade-tooltip" id="upgradett">
+                        <span class="upgrade-tt-title" id="upgrade_tt_title">Upgrade Name</span><br>
+                        <span class="upgrade-tt-desc" id="upgrade_tt_desc">Upgrade Description</span>
+                    </div>
+
+
+                    <span class="upgrades-label">Upgrades</span>
+                    <div class="upgrade-container">
+                        <div class="upgrades-none" id="no_upgrades">
+                            <span class="upgrades-none-text">No bought upgrades! Keep playing to find more.</span>
+                        </div>
+                        <img class="upgrade" src="images/upgrades/silvercursors.png" id="upgrade_silvercursors"
+                            onmouseenter="silvercursors_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/goldencursors.png" id="upgrade_goldencursors"
+                            onmouseenter="goldencursors_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/platinumcursors.png" id="upgrade_platinumcursors"
+                            onmouseenter="platinumcursors_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/diamondcursors.png" id="upgrade_diamondcursors"
+                            onmouseenter="diamondcursors_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/emeraldcursors.png" id="upgrade_emeraldcursors"
+                            onmouseenter="emeraldcursors_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/rubycursors.png" id="upgrade_rubycursors"
+                            onmouseenter="rubycursors_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/goldenfingers.png" id="upgrade_goldenfingers"
+                            onmouseenter="goldenfingers_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/platinumfingers.png" id="upgrade_platinumfingers"
+                            onmouseenter="platinumfingers_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/diamondfingers.png" id="upgrade_diamondfingers"
+                            onmouseenter="diamondfingers_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/emeraldfingers.png" id="upgrade_emeraldfingers"
+                            onmouseenter="emeraldfingers_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/rubyfingers.png" id="upgrade_rubyfingers"
+                            onmouseenter="rubyfingers_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/obsidianfingers.png" id="upgrade_obsidianfingers"
+                            onmouseenter="obsidianfingers_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/baconbones.png" id="upgrade_baconbones"
+                            onmouseenter="baconbones_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/meatbones.png" id="upgrade_meatbones" onmouseenter="meatbones_hover(); upgradett_enter()"
+                            onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/thebone.png" id="upgrade_thebone" onmouseenter="thebone_hover(); upgradett_enter()"
+                            onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/nylonbones.png" id="upgrade_nylonbones" onmouseenter="nylonbones_hover(); upgradett_enter()"
+                            onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/hidebones.png" id="upgrade_hidebones" onmouseenter="hidebones_hover(); upgradett_enter()"
+                            onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/stick.png" id="upgrade_stick" onmouseenter="stick_hover(); upgradett_enter()"
+                            onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/superfrisbe.png" id="upgrade_superfrisbe"
+                            onmouseenter="superfrisbe_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/superepicfrisbe.png" id="upgrade_superepicfrisbe"
+                            onmouseenter="superepicfrisbe_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/superultraepicfrisbe.png" id="upgrade_superultraepicfrisbe"
+                            onmouseenter="superultraepicfrisbe_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/superultraepicfrisbepro.png" id="upgrade_superultraepicfrisbepro"
+                            onmouseenter="superultraepicfrisbepro_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/superultraepicfrisbeproPE.png" id="upgrade_superultraepicfrisbeproPE"
+                            onmouseenter="superultraepicfrisbeproPE_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/superultraepicfrisbeproPE2026.png" id="upgrade_superultraepicfrisbeproPE2026"
+                            onmouseenter="superultraepicfrisbeproPE2026_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/hmtreats.png" id="upgrade_hmtreats" onmouseenter="hmtreats_hover(); upgradett_enter()"
+                            onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/barkbites.png" id="upgrade_barkbites" onmouseenter="barkbites_hover(); upgradett_enter()"
+                            onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/frostedtreats.png" id="upgrade_frostedtreats"
+                            onmouseenter="frostedtreats_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/nugget.png" id="upgrade_nugget" onmouseenter="nugget_hover(); upgradett_enter()"
+                            onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/pizza.png" id="upgrade_pizza" onmouseenter="pizza_hover(); upgradett_enter()"
+                            onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/bacon.png" id="upgrade_bacon" onmouseenter="bacon_hover(); upgradett_enter()"
+                            onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/xlbed.png" id="upgrade_xlbed"
+                            onmouseenter="xlbed_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/pillow.png" id="upgrade_pillow"
+                            onmouseenter="pillow_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/walter.png" id="upgrade_walter"
+                            onmouseenter="walter_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/lola.png" id="upgrade_lola"
+                            onmouseenter="lola_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/goldeneddies.png" id="upgrade_goldeneddies"
+                            onmouseenter="goldeneddies_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/shimmeringeddies.png" id="upgrade_shimmeringeddies"
+                            onmouseenter="shimmeringeddies_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/emptybottle.png" id="upgrade_emptybottle"
+                            onmouseenter="emptybottle_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/biggerflasks.png" id="upgrade_biggerflasks"
+                            onmouseenter="biggerflasks_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                        <img class="upgrade" src="images/upgrades/reinforcedflasks.png" id="upgrade_reinforcedflasks"
+                            onmouseenter="reinforcedflasks_hover(); upgradett_enter()" onmouseleave="upgradett_leave()" hidden>
+
+                    </div>
+                </div>
+
+                <div class="rank-all">
+                    <span class="rank-title">Rank</span>
+                    <div class="rank-container">
+                        <div class="rank-left">
+                            <img src="images/ranks/rank-none.png" class="rank" id="rank">
+                        </div>
+                        <div class="rank-right">
+                            <div>
+                            </div>
+                            <div>
+                                <span id="rank_text"><span id="rank_progress" class="rank-counter">?</span> Eddie Orbs till next rank</span>
+                                <div style="position: relative; border-radius: 5px; overflow: hidden;">
+                                    <div class="rank-prograss-overlay" id="rank_progress_overlay"></div>
+                                    <div class="rank-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sphere-all">
+                    <span class="sphere-title" style="font-size: 2em; font-weight: 600;">Current Sphere</span>
+                    <div class="sphere-container">
+                        <img class="sphere" src="images/spheres/EddieSphere.gif" id="sphere">
+                    </div>
+                    <div class="sphere-container" style="margin-top: 5px;">
+                        <span class="sphere-title" id="spheretitle">-</span>
+                    </div>
+                </div>
+
+            </section>
+            <section class="right">
+                <div class="achievements">
+                    <span class="achievements-title">Achievements</span>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement1-title">???</span><br>
+                        <span class="achievement-desc" id="achievement1-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement2-title">???</span><br>
+                        <span class="achievement-desc" id="achievement2-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement3-title">???</span><br>
+                        <span class="achievement-desc" id="achievement3-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement4-title">???</span><br>
+                        <span class="achievement-desc" id="achievement4-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement5-title">???</span><br>
+                        <span class="achievement-desc" id="achievement5-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement6-title">???</span><br>
+                        <span class="achievement-desc" id="achievement6-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement7-title">???</span><br>
+                        <span class="achievement-desc" id="achievement7-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement8-title">???</span><br>
+                        <span class="achievement-desc" id="achievement8-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement9-title">???</span><br>
+                        <span class="achievement-desc" id="achievement9-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement10-title">???</span><br>
+                        <span class="achievement-desc" id="achievement10-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement11-title">???</span><br>
+                        <span class="achievement-desc" id="achievement11-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement12-title">???</span><br>
+                        <span class="achievement-desc" id="achievement12-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement15-title">???</span><br>
+                        <span class="achievement-desc" id="achievement15-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement13-title">???</span><br>
+                        <span class="achievement-desc" id="achievement13-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement14-title">???</span><br>
+                        <span class="achievement-desc" id="achievement14-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement18-title">???</span><br>
+                        <span class="achievement-desc" id="achievement18-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement19-title">???</span><br>
+                        <span class="achievement-desc" id="achievement19-desc">Locked Achievement</span>
+                    </div>
+                    <div class="achievement">
+                        <span class="achievement-title" id="achievement21-title">???</span><br>
+                        <span class="achievement-desc" id="achievement21-desc">Locked Achievement</span>
+                    </div>
+                </div>
+
+                <div class="achievements">
+                    <span class="achievements-title">Secret Achievements</span>
+                    <div class="achievement secret">
+                        <span class="achievement-title" id="achievement16-title">???</span><br>
+                        <span class="achievement-desc" id="achievement16-desc">Locked Secret Achievement</span>
+                    </div>
+                    <div class="achievement secret">
+                        <span class="achievement-title" id="achievement17-title">???</span><br>
+                        <span class="achievement-desc" id="achievement17-desc">Locked Secret Achievement</span>
+                    </div>
+                    <div class="achievement secret">
+                        <span class="achievement-title" id="achievement20-title">???</span><br>
+                        <span class="achievement-desc" id="achievement20-desc">Locked Secret Achievement</span>
+                    </div>
+                </div>
+
+    </div>
+    </section>
+    </section>
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PDN957ERFR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PDN957ERFR');
+    </script>
+
+    <script src="node_modules/numeral/numeral.js"></script>
+    <script src="save.js"></script>
+    <script src="stats.js"></script>
+</body>
+
+</html>

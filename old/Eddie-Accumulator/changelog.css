@@ -1,0 +1,274 @@
+:root {
+  --bg: rgb(32, 28, 45);
+  --darkbg: rgb(24, 22, 36);
+  --darkerbg: rgb(18, 17, 27);
+  --darkestbg: rgb(11, 11, 17);
+  --blackTP: rgba(0, 0, 0, 50%);
+  --blackTP2: rgba(0, 0, 0, 75%);
+  --update1: rgb(82, 255, 110);
+  --update2: rgb(255, 192, 82);
+  --update3: rgb(82, 192, 255);
+  --bouncy: cubic-bezier(0, 2, 0.8, 1);
+}
+
+@font-face {
+  font-family: renogare;
+  src: url("fonts/renogare.otf");
+}
+
+@font-face {
+  font-family: deca;
+  src: url(fonts/deca.ttf);
+}
+
+html {
+  font-size: 62.5%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background-color: var(--bg);
+  scroll-behavior: smooth;
+}
+
+p,
+a,
+span {
+  color: white;
+  margin: 0;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+body {
+  margin: 0;
+  font-family: deca;
+}
+
+.backbutton {
+  text-align: center;
+  position: sticky;
+  background-color: var(--blackTP2);
+  width: 100px;
+  height: 30px;
+  left: 0;
+  top: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  z-index: 5;
+  transition: width var(--bouncy) 0.25s, letter-spacing var(--bouncy) 0.25s;
+}
+
+.backbutton:after {
+  content: " ";
+  width: 0px;
+  height: 0px;
+  border-top: 30px solid var(--blackTP2);
+  border-left: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  right: -10px;
+  top: 0px;
+}
+
+.backbutton:hover {
+  width: 125px;
+  letter-spacing: 3px;
+}
+
+.backbutton:active {
+  width: 140px;
+  letter-spacing: 0px;
+}
+
+.title-text {
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 3em;
+  width: 550px;
+  color: white;
+  background-color: rgba(0, 0, 0, 50%);
+}
+
+.title-bg {
+  background-repeat: repeat-x;
+  position: absolute;
+  background-image: url(images/banner.png);
+  height: 200px;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+  top: -50px;
+  filter: brightness(50%);
+}
+
+.title-line {
+  width: 100%;
+  height: 5px;
+  background-color: var(--darkbg);
+  position: absolute;
+  top: 150px;
+}
+
+.changelog {
+  margin: 50px;
+}
+
+.changelog-title {
+  text-align: center;
+  font-size: 2em;
+  background-color: var(--darkerbg);
+  width: 200px;
+  position: relative;
+}
+
+.changelog-title:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 10px solid var(--bg);
+  border-left: 10px solid var(--darkerbg);
+  width: 0;
+}
+
+.changelog-header {
+  font-size: 1.25em;
+}
+
+.changelog-body {
+  font-size: 1.5em;
+  background-color: var(--darkbg);
+  padding: 10px;
+}
+
+.update-divider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-divider span {
+  white-space: nowrap;
+  padding-right: 5px;
+  font-weight: 800;
+}
+
+.update-divider div {
+  width: 100%;
+  height: 1px;
+}
+
+.changelog-extention {
+  padding-left: 10px;
+  font-weight: 400;
+}
+
+.changelog-extention-2 {
+  padding-left: 25px;
+  font-weight: 300;
+}
+
+.changelog-img {
+  width: 500px;
+}
+
+.changelog-date {
+  color: gray;
+}
+
+.feature-body {
+  font-size: 1.5em;
+  background-color: var(--darkbg);
+  padding: 10px;
+}
+
+.feature-flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.feature-header {
+  font-size: 1.5em;
+  width: 250px;
+  height: 30px;
+  background-color: var(--bg);
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.feature-header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 30px solid var(--darkbg);
+  border-left: 10px solid var(--bg);
+  width: 0;
+}
+
+.bug {
+  background-color: var(--darkbg);
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  margin-top: 100px;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+.bug-link {
+  color: cornflowerblue;
+}
+
+.addition {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.addition-img {
+  width: 20px;
+}
+
+.addition-img:hover {
+  transform: scale(125%);
+}
+
+.addition-text {
+  padding-left: 20px;
+}
+
+.top-button {
+  background-color: var(--darkerbg);
+  width: 200px;
+  text-align: center;
+  border-radius: 5px 5px 0px 0px;
+  padding: 5px;
+  margin: 0 auto;
+  position: sticky;
+  bottom: -30px;
+  font-size: 1.25em;
+  height: 20px;
+  cursor: pointer;
+  transition: height ease-in-out 0.25s,
+    bottom cubic-bezier(0.75, -0.5, 0.25, 1.5) 0.5s;
+  user-select: none;
+}
+
+.top-button:hover {
+  height: 25px;
+}
+
+.top-button:active {
+  transition: none;
+  height: 30px;
+}
